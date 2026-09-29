@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function CourseCard({ course }) {
   return (
     <article className="course-card">

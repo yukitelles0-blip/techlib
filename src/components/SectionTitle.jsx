@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function SectionTitle({ eyebrow, title, text, action }) {
   return (
     <div className="section-heading">

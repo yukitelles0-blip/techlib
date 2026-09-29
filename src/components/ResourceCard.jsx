@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function ResourceCard({ resource }) {
   return (
     <article className="resource-card">
@@ -16,7 +18,12 @@ export default function ResourceCard({ resource }) {
         {resource.free && <span>✓ Gratuito</span>}
       </div>
 
-      <a className="card-button" href={resource.url} target="_blank" rel="noreferrer">
+      <a
+        className="card-button"
+        href={resource.url}
+        target="_blank"
+        rel="noreferrer"
+      >
         Acessar recurso <span>↗</span>
       </a>
     </article>

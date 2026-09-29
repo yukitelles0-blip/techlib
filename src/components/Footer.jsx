@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -12,6 +13,7 @@ export default function Footer() {
               <small>Biblioteca Tech</small>
             </span>
           </Link>
+
           <p className="footer-text">
             Conhecimento Tech organizado para facilitar sua jornada de aprendizagem.
           </p>

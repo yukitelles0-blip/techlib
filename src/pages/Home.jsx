@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import SectionTitle from "../components/SectionTitle";
 import ResourceCard from "../components/ResourceCard";

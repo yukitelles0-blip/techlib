@@ -1,3 +1,4 @@
+import React from "react";
 import SectionTitle from "../components/SectionTitle";
 import { tracks } from "../data/tracks";
 
@@ -15,9 +16,12 @@ export default function Tracks() {
           <article className="full-track-card" key={track.id}>
             <div className="track-header">
               <span className="track-icon">{track.icon}</span>
+
               <div>
                 <span className="tag">{track.category}</span>
+
                 <h2>{track.title}</h2>
+
                 <p>{track.description}</p>
               </div>
             </div>
@@ -25,7 +29,10 @@ export default function Tracks() {
             <div className="timeline">
               {track.steps.map((step, index) => (
                 <div className="timeline-item" key={step}>
-                  <span className="timeline-number">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="timeline-number">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
                   <span>{step}</span>
                 </div>
               ))}

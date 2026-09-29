@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function FilterBar({
   search,
   setSearch,
@@ -15,6 +17,7 @@ export default function FilterBar({
     <div className="filters-panel">
       <div className="search-box">
         <span>⌕</span>
+
         <input
           value={search}
           onChange={(e) => setSearch(e.target.value)}
@@ -23,19 +26,40 @@ export default function FilterBar({
         />
       </div>
 
-      <select value={category} onChange={(e) => setCategory(e.target.value)} aria-label="Filtrar por área">
+      <select
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+        aria-label="Filtrar por área"
+      >
         <option value="Todos">Todas as áreas</option>
-        {categories.map((item) => <option key={item}>{item}</option>)}
+
+        {categories.map((item) => (
+          <option key={item}>{item}</option>
+        ))}
       </select>
 
-      <select value={level} onChange={(e) => setLevel(e.target.value)} aria-label="Filtrar por nível">
+      <select
+        value={level}
+        onChange={(e) => setLevel(e.target.value)}
+        aria-label="Filtrar por nível"
+      >
         <option value="Todos">Todos os níveis</option>
-        {levels.map((item) => <option key={item}>{item}</option>)}
+
+        {levels.map((item) => (
+          <option key={item}>{item}</option>
+        ))}
       </select>
 
-      <select value={type} onChange={(e) => setType(e.target.value)} aria-label="Filtrar por tipo">
+      <select
+        value={type}
+        onChange={(e) => setType(e.target.value)}
+        aria-label="Filtrar por tipo"
+      >
         <option value="Todos">Todos os tipos</option>
-        {types.map((item) => <option key={item}>{item}</option>)}
+
+        {types.map((item) => (
+          <option key={item}>{item}</option>
+        ))}
       </select>
     </div>
   );
