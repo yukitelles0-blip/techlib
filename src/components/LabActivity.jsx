@@ -1,0 +1,90 @@
+import React, { useState } from "react";
+
+const logEvents = [
+  "09:14:02 - LOGIN_FAILED - user=admin - ip=192.168.1.10",
+  "09:14:05 - LOGIN_FAILED - user=admin - ip=192.168.1.10",
+  "09:14:08 - LOGIN_FAILED - user=admin - ip=192.168.1.10",
+  "09:14:11 - LOGIN_FAILED - user=admin - ip=192.168.1.10",
+  "09:14:14 - LOGIN_FAILED - user=admin - ip=192.168.1.10",
+  "09:15:32 - LOGIN_SUCCESS - user=yuki - ip=192.168.1.20",
+  "09:16:10 - LOGIN_SUCCESS - user=ana - ip=192.168.1.30",
+  "09:17:44 - LOGIN_FAILED - user=carlos - ip=192.168.1.40",
+];
+
+export default function LabActivity() {
+  const [answer, setAnswer] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const correctAnswer = "192.168.1.10";
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    setSubmitted(true);
+  }
+
+  const isCorrect = answer === correctAnswer;
+
+  return (
+    <div className="lab-activity">
+      <div className="lab-activity-header">
+        <span>🧪</span>
+        <div>
+          <h2>Etapa 1 — Análise dos Logs</h2>
+          <p>
+            Analise os eventos abaixo e identifique o endereço IP que apresenta
+            um comportamento suspeito.
+          </p>
+        </div>
+      </div>
+
+      <div className="log-viewer">
+        {logEvents.map((log, index) => (
+          <div key={index} className="log-line">
+            {log}
+          </div>
+        ))}
+      </div>
+
+      <form className="lab-question" onSubmit={handleSubmit}>
+        <label htmlFor="ip-answer">
+          Qual endereço IP apresenta o comportamento mais suspeito?
+        </label>
+
+        <input
+          id="ip-answer"
+          type="text"
+          placeholder="Ex.: 192.168.1.10"
+          value={answer}
+          onChange={(event) => setAnswer(event.target.value)}
+        />
+
+        <button type="submit" className="card-button">
+          Verificar resposta
+        </button>
+      </form>
+
+      {submitted && (
+        <div className={isCorrect ? "lab-feedback success" : "lab-feedback error"}>
+          {isCorrect ? (
+            <>
+              <strong>✅ Resposta correta!</strong>
+              <p>
+                O endereço <strong>192.168.1.10</strong> apresenta cinco
+                tentativas consecutivas de login malsucedido em poucos
+                segundos, o que merece investigação.
+              </p>
+            </>
+          ) : (
+            <>
+              <strong>❌ Ainda não.</strong>
+              <p>
+                Observe principalmente a quantidade e a frequência das
+                tentativas de login malsucedido.
+              </p>
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
