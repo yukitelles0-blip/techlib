@@ -70,5 +70,176 @@ export const courses = [
     icon: "☁️",
     description: "Conceitos básicos de computação em nuvem e seus principais modelos.",
     url: "https://www.coursera.org/learn/introduction-to-cloud"
+  },
+
+  // Novos conteúdos — TechLib 1.1
+
+  {
+    id: 7,
+    title: "Python Certification",
+    platform: "freeCodeCamp",
+    category: "Programação",
+    level: "Iniciante",
+    duration: "No próprio ritmo",
+    certificate: true,
+    icon: "🐍",
+    description: "Curso completo de fundamentos de Python, com exercícios, projetos e preparação para certificação.",
+    url: "https://www.freecodecamp.org/learn/python-v9/"
+  },
+  {
+    id: 8,
+    title: "Responsive Web Design",
+    platform: "freeCodeCamp",
+    category: "Desenvolvimento Web",
+    level: "Iniciante",
+    duration: "No próprio ritmo",
+    certificate: true,
+    icon: "🌐",
+    description: "Aprendizado prático de HTML, CSS, Flexbox, CSS Grid e desenvolvimento de páginas responsivas.",
+    url: "https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+  },
+  {
+    id: 9,
+    title: "Relational Databases",
+    platform: "freeCodeCamp",
+    category: "Banco de Dados",
+    level: "Iniciante",
+    duration: "No próprio ritmo",
+    certificate: true,
+    icon: "🗄️",
+    description: "Aprendizado prático de bancos relacionais, SQL, PostgreSQL, Bash e Git por meio de projetos.",
+    url: "https://www.freecodecamp.org/learn/relational-database/"
+  },
+  {
+    id: 10,
+    title: "Back End Development and APIs",
+    platform: "freeCodeCamp",
+    category: "Desenvolvimento Web",
+    level: "Intermediário",
+    duration: "No próprio ritmo",
+    certificate: true,
+    icon: "⚙️",
+    description: "Desenvolvimento de aplicações back-end e APIs utilizando Node.js, Express e tecnologias relacionadas.",
+    url: "https://www.freecodecamp.org/learn/back-end-development-and-apis/"
+  },
+  {
+    id: 11,
+    title: "Introduction to Linux",
+    platform: "Linux Foundation",
+    category: "Linux",
+    level: "Iniciante",
+    duration: "No próprio ritmo",
+    certificate: false,
+    icon: "🐧",
+    description: "Fundamentos de Linux, interface gráfica, linha de comando, ferramentas e administração básica.",
+    url: "https://training.linuxfoundation.org/training/introduction-to-linux/"
+  },
+  {
+    id: 12,
+    title: "Introduction to DevOps and SRE",
+    platform: "Linux Foundation",
+    category: "DevOps",
+    level: "Iniciante",
+    duration: "No próprio ritmo",
+    certificate: false,
+    icon: "⚙️",
+    description: "Introdução aos conceitos de DevOps e Site Reliability Engineering.",
+    url: "https://training.linuxfoundation.org/"
+  },
+  {
+    id: 13,
+    title: "Introduction to Cloud Infrastructure Technologies",
+    platform: "Linux Foundation",
+    category: "Cloud",
+    level: "Iniciante",
+    duration: "No próprio ritmo",
+    certificate: false,
+    icon: "☁️",
+    description: "Introdução às principais tecnologias e conceitos de infraestrutura em nuvem.",
+    url: "https://training.linuxfoundation.org/"
+  },
+  {
+    id: 14,
+    title: "Open Source Software Development",
+    platform: "Linux Foundation",
+    category: "Desenvolvimento",
+    level: "Iniciante",
+    duration: "No próprio ritmo",
+    certificate: false,
+    icon: "🌱",
+    description: "Introdução ao desenvolvimento de software de código aberto e às práticas da comunidade open source.",
+    url: "https://training.linuxfoundation.org/"
+  },
+  {
+    id: 15,
+    title: "Get Started with Python Programming: Part 1 - Fundamentals",
+    platform: "Microsoft Learn",
+    category: "Programação",
+    level: "Iniciante",
+    duration: "3h 12min",
+    certificate: false,
+    icon: "🐍",
+    description: "Fundamentos de Python, incluindo variáveis, tipos de dados, funções e primeiros programas.",
+    url: "https://learn.microsoft.com/en-us/training/paths/get-started-with-python-fundamentals/"
+  },
+  {
+    id: 16,
+    title: "Comece a criar com o Power BI",
+    platform: "Microsoft Learn",
+    category: "Dados",
+    level: "Iniciante",
+    duration: "21 min",
+    certificate: false,
+    icon: "📊",
+    description: "Módulo introdutório para começar a trabalhar com dados e visualizações no Power BI.",
+    url: "https://learn.microsoft.com/pt-br/training/powerplatform/power-bi"
+  },
+  {
+    id: 17,
+    title: "Introdução à Análise de Dados do Microsoft Azure",
+    platform: "Microsoft Learn",
+    category: "Dados",
+    level: "Iniciante",
+    duration: "2h 08min",
+    certificate: false,
+    icon: "📈",
+    description: "Roteiro introdutório sobre análise de dados, armazenamento, ingestão, modelagem e visualização.",
+    url: "https://learn.microsoft.com/pt-br/training/paths/azure-data-fundamentals-explore-data-warehouse-analytics/"
+  },
+  {
+    id: 18,
+    title: "Networking Basics",
+    platform: "Cisco Networking Academy",
+    category: "Redes",
+    level: "Iniciante",
+    duration: "22 horas",
+    certificate: true,
+    icon: "🌐",
+    description: "Fundamentos de redes, dispositivos, protocolos, endereçamento IP e configuração básica de uma LAN.",
+    url: "https://www.netacad.com/"
+  },
+  {
+    id: 19,
+    title: "Python Essentials 1",
+    platform: "Cisco Networking Academy",
+    category: "Programação",
+    level: "Iniciante",
+    duration: "30 horas",
+    certificate: true,
+    icon: "🐍",
+    description: "Fundamentos de programação com Python, incluindo variáveis, operações, estruturas de controle, listas, funções e exceções.",
+    url: "https://www.netacad.com/pt-br/courses/programming/pcap-programming-essentials-python"
+  },
+  {
+    id: 20,
+    title: "Data Analytics Essentials",
+    platform: "Cisco Networking Academy",
+    category: "Dados",
+    level: "Iniciante",
+    duration: "30 horas",
+    certificate: true,
+    icon: "📊",
+    description: "Fundamentos de análise de dados utilizando Excel, SQL, visualização e Tableau, com atividades práticas.",
+    url: "https://www.netacad.com/courses/data-analytics-essentials"
   }
 ];
