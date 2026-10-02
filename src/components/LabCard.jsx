@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { isLabCompleted } from "../utils/progress";
 
 export default function LabCard({ lab }) {
+  const completed = isLabCompleted(lab.id);
+
   return (
     <article className="resource-card">
       <div className="card-topline">
@@ -24,8 +27,14 @@ export default function LabCard({ lab }) {
         <span>{lab.objective}</span>
       </div>
 
+      {completed && (
+        <div className="lab-completed">
+          ✓ Lab concluído
+        </div>
+      )}
+
       <Link className="card-button" to={`/labs/${lab.id}`}>
-        Iniciar Lab <span>→</span>
+        {completed ? "Revisar Lab" : "Iniciar Lab"} <span>→</span>
       </Link>
     </article>
   );
