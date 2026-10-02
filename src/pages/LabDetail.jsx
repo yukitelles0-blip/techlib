@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { labs } from "../data/labs";
+import LabActivity from "../components/LabActivity";
 
 export default function LabDetail() {
   const { id } = useParams();
@@ -14,6 +15,7 @@ export default function LabDetail() {
           <span>🔎</span>
           <h1>Lab não encontrado</h1>
           <p>O laboratório que você tentou acessar não existe.</p>
+
           <Link className="primary-button" to="/labs">
             Voltar para Labs
           </Link>
@@ -59,14 +61,7 @@ export default function LabDetail() {
           </div>
         </div>
 
-        <div className="lab-placeholder">
-          <span>🧪</span>
-          <h2>Atividade em preparação</h2>
-          <p>
-            A estrutura deste laboratório já está pronta. A atividade
-            interativa será adicionada nesta etapa.
-          </p>
-        </div>
+        {lab.id === 1 && <LabActivity />}
       </div>
     </section>
   );
