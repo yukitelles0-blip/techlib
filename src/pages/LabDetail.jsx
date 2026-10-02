@@ -9,6 +9,7 @@ import PythonActivity from "../components/PythonActivity";
 import SQLActivity from "../components/SQLActivity";
 import WebActivity from "../components/WebActivity";
 import DockerActivity from "../components/DockerActivity";
+import IPInvestigationActivity from "../components/IPInvestigationActivity";
 
 export default function LabDetail() {
   const { id } = useParams();
@@ -76,6 +77,7 @@ export default function LabDetail() {
         {lab.id === 6 && <SQLActivity />}
         {lab.id === 7 && <WebActivity />}
         {lab.id === 8 && <DockerActivity />}
+        {lab.id === 9 && <IPInvestigationActivity />}
       </div>
     </section>
   );
