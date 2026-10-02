@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { labs } from "../data/labs";
+import {
+  isLabCompleted,
+  markLabAsCompleted,
+  unmarkLabAsCompleted,
+} from "../utils/progress";
 import LabActivity from "../components/LabActivity";
 import PhishingActivity from "../components/PhishingActivity";
 import NetworkActivity from "../components/NetworkActivity";
@@ -17,6 +22,10 @@ export default function LabDetail() {
 
   const lab = labs.find((item) => item.id === Number(id));
 
+  const [completed, setCompleted] = useState(() =>
+    lab ? isLabCompleted(lab.id) : false
+  );
+
   if (!lab) {
     return (
       <section className="section container page-section">
@@ -31,6 +40,16 @@ export default function LabDetail() {
         </div>
       </section>
     );
+  }
+
+  function handleToggleCompleted() {
+    if (completed) {
+      unmarkLabAsCompleted(lab.id);
+      setCompleted(false);
+    } else {
+      markLabAsCompleted(lab.id);
+      setCompleted(true);
+    }
   }
 
   return (
@@ -68,6 +87,18 @@ export default function LabDetail() {
             <strong>Objetivo</strong>
             <span>{lab.objective}</span>
           </div>
+        </div>
+
+        <div className="lab-progress-action">
+          <button
+            type="button"
+            className={completed ? "secondary-button" : "primary-button"}
+            onClick={handleToggleCompleted}
+          >
+            {completed
+              ? "✓ Lab concluído — Desmarcar"
+              : "Marcar como concluído"}
+          </button>
         </div>
 
         {lab.id === 1 && <LabActivity />}
