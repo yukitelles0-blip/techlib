@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function LabCard({ lab }) {
   return (
@@ -23,9 +24,9 @@ export default function LabCard({ lab }) {
         <span>{lab.objective}</span>
       </div>
 
-      <button className="card-button">
+      <Link className="card-button" to={`/labs/${lab.id}`}>
         Iniciar Lab <span>→</span>
-      </button>
+      </Link>
     </article>
   );
 }
