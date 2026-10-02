@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { labs } from "../data/labs";
 import LabActivity from "../components/LabActivity";
+import PhishingActivity from "../components/PhishingActivity";
 
 export default function LabDetail() {
   const { id } = useParams();
@@ -62,6 +63,7 @@ export default function LabDetail() {
         </div>
 
         {lab.id === 1 && <LabActivity />}
+        {lab.id === 2 && <PhishingActivity />}
       </div>
     </section>
   );
