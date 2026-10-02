@@ -18,7 +18,7 @@ export const resources = [
     type: "Documentação",
     icon: "🐍",
     free: true,
-    description: "Documentação oficial da linguagem Python, incluindo tutorial e biblioteca padrão.",
+    description: "Documentação oficial da linguagem Python, incluindo tutorial, referência da linguagem e biblioteca padrão.",
     url: "https://docs.python.org/3/"
   },
   {
@@ -29,7 +29,7 @@ export const resources = [
     type: "Documentação",
     icon: "🌐",
     free: true,
-    description: "Referência para HTML, CSS, JavaScript e desenvolvimento para a Web.",
+    description: "Referência para HTML, CSS, JavaScript, APIs e desenvolvimento para a Web.",
     url: "https://developer.mozilla.org/pt-BR/"
   },
   {
@@ -73,7 +73,7 @@ export const resources = [
     type: "Documentação",
     icon: "🛡️",
     free: true,
-    description: "Referência para entender uma abordagem estruturada de gerenciamento de riscos cibernéticos.",
+    description: "Referência para compreender uma abordagem estruturada de gerenciamento de riscos cibernéticos.",
     url: "https://www.nist.gov/cyberframework"
   },
   {
@@ -86,5 +86,248 @@ export const resources = [
     free: true,
     description: "Lições interativas para praticar os fundamentos de SQL diretamente no navegador.",
     url: "https://sqlbolt.com/"
+  },
+
+  {
+    id: 9,
+    title: "Python Tutorial",
+    category: "Programação",
+    level: "Iniciante",
+    type: "Tutorial",
+    icon: "🐍",
+    free: true,
+    description: "Tutorial oficial para conhecer os principais conceitos e recursos da linguagem Python.",
+    url: "https://docs.python.org/pt-br/3/tutorial/"
+  },
+  {
+    id: 10,
+    title: "Python Language Reference",
+    category: "Programação",
+    level: "Intermediário",
+    type: "Documentação",
+    icon: "📘",
+    free: true,
+    description: "Referência oficial da sintaxe e da semântica da linguagem Python.",
+    url: "https://docs.python.org/3/reference/"
+  },
+  {
+    id: 11,
+    title: "MDN — Aprendendo Desenvolvimento Web",
+    category: "Desenvolvimento Web",
+    level: "Iniciante",
+    type: "Tutorial",
+    icon: "🌐",
+    free: true,
+    description: "Trilha introdutória da MDN para aprender desenvolvimento web, HTML, CSS e JavaScript.",
+    url: "https://developer.mozilla.org/pt-BR/docs/Learn_web_development"
+  },
+  {
+    id: 12,
+    title: "MDN — Como a Web Funciona",
+    category: "Redes",
+    level: "Iniciante",
+    type: "Tutorial",
+    icon: "🔗",
+    free: true,
+    description: "Explicação introdutória sobre clientes, servidores, requisições, respostas, DNS e pacotes.",
+    url: "https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works"
+  },
+  {
+    id: 13,
+    title: "MDN — Web APIs",
+    category: "Desenvolvimento Web",
+    level: "Intermediário",
+    type: "Documentação",
+    icon: "⚙️",
+    free: true,
+    description: "Referência das APIs e interfaces disponíveis para desenvolvimento na Web.",
+    url: "https://developer.mozilla.org/pt-BR/docs/Web/API"
+  },
+  {
+    id: 14,
+    title: "Docker Get Started",
+    category: "DevOps",
+    level: "Iniciante",
+    type: "Tutorial",
+    icon: "🐳",
+    free: true,
+    description: "Material oficial para começar com Docker, containers, imagens e aplicações containerizadas.",
+    url: "https://docs.docker.com/get-started/"
+  },
+  {
+    id: 15,
+    title: "Docker Overview",
+    category: "DevOps",
+    level: "Iniciante",
+    type: "Documentação",
+    icon: "🐳",
+    free: true,
+    description: "Visão geral da plataforma Docker e dos principais conceitos relacionados a containers.",
+    url: "https://docs.docker.com/get-started/docker-overview/"
+  },
+  {
+    id: 16,
+    title: "Docker — Primeiro Container",
+    category: "DevOps",
+    level: "Iniciante",
+    type: "Laboratório",
+    icon: "📦",
+    free: true,
+    description: "Tutorial prático para executar um container e compreender conceitos básicos do Docker.",
+    url: "https://docs.docker.com/get-started/tutorials/run-app/"
+  },
+  {
+    id: 17,
+    title: "GitHub Docs",
+    category: "Desenvolvimento",
+    level: "Iniciante",
+    type: "Documentação",
+    icon: "🐙",
+    free: true,
+    description: "Documentação oficial do GitHub sobre repositórios, colaboração, GitHub Actions e outros recursos.",
+    url: "https://docs.github.com/pt"
+  },
+  {
+    id: 18,
+    title: "Git Documentation",
+    category: "Desenvolvimento",
+    level: "Iniciante",
+    type: "Documentação",
+    icon: "🔀",
+    free: true,
+    description: "Documentação oficial do Git para controle de versão e gerenciamento de código.",
+    url: "https://git-scm.com/docs"
+  },
+  {
+    id: 19,
+    title: "PostgreSQL Documentation",
+    category: "Banco de Dados",
+    level: "Intermediário",
+    type: "Documentação",
+    icon: "🐘",
+    free: true,
+    description: "Documentação oficial do PostgreSQL, banco de dados relacional de código aberto.",
+    url: "https://www.postgresql.org/docs/"
+  },
+  {
+    id: 20,
+    title: "MySQL Documentation",
+    category: "Banco de Dados",
+    level: "Intermediário",
+    type: "Documentação",
+    icon: "🗄️",
+    free: true,
+    description: "Documentação oficial do MySQL sobre SQL, administração, desenvolvimento e recursos do banco.",
+    url: "https://dev.mysql.com/doc/"
+  },
+  {
+    id: 21,
+    title: "SQLite Documentation",
+    category: "Banco de Dados",
+    level: "Iniciante",
+    type: "Documentação",
+    icon: "💾",
+    free: true,
+    description: "Documentação oficial do SQLite, banco de dados leve e amplamente utilizado em aplicações.",
+    url: "https://www.sqlite.org/docs.html"
+  },
+  {
+    id: 22,
+    title: "Microsoft Learn",
+    category: "Cloud",
+    level: "Iniciante",
+    type: "Cursos",
+    icon: "☁️",
+    free: true,
+    description: "Plataforma de aprendizado da Microsoft com conteúdos sobre Azure, desenvolvimento, dados, segurança e outras tecnologias.",
+    url: "https://learn.microsoft.com/pt-br/training/"
+  },
+  {
+    id: 23,
+    title: "AWS Training and Certification",
+    category: "Cloud",
+    level: "Iniciante",
+    type: "Cursos",
+    icon: "☁️",
+    free: true,
+    description: "Recursos oficiais da AWS para desenvolver conhecimentos em computação em nuvem.",
+    url: "https://aws.amazon.com/training/"
+  },
+  {
+    id: 24,
+    title: "Google Cloud Training",
+    category: "Cloud",
+    level: "Iniciante",
+    type: "Cursos",
+    icon: "☁️",
+    free: true,
+    description: "Recursos de aprendizagem para conhecer serviços, conceitos e tecnologias do Google Cloud.",
+    url: "https://cloud.google.com/learn/training"
+  },
+  {
+    id: 25,
+    title: "Kubernetes Documentation",
+    category: "DevOps",
+    level: "Intermediário",
+    type: "Documentação",
+    icon: "☸️",
+    free: true,
+    description: "Documentação oficial para aprender conceitos e recursos do Kubernetes.",
+    url: "https://kubernetes.io/docs/"
+  },
+  {
+    id: 26,
+    title: "Linux Foundation Training",
+    category: "Linux",
+    level: "Iniciante",
+    type: "Cursos",
+    icon: "🐧",
+    free: true,
+    description: "Recursos de treinamento e materiais relacionados a Linux, open source, cloud e tecnologias de infraestrutura.",
+    url: "https://training.linuxfoundation.org/"
+  },
+  {
+    id: 27,
+    title: "Wireshark Documentation",
+    category: "Redes",
+    level: "Intermediário",
+    type: "Documentação",
+    icon: "🦈",
+    free: true,
+    description: "Documentação oficial do Wireshark para aprender sobre análise de tráfego e captura de pacotes.",
+    url: "https://www.wireshark.org/docs/"
+  },
+  {
+    id: 28,
+    title: "Cisco Networking Academy",
+    category: "Redes",
+    level: "Iniciante",
+    type: "Cursos",
+    icon: "🌐",
+    free: true,
+    description: "Plataforma educacional com conteúdos de redes, programação, cybersecurity, IoT e outras áreas de tecnologia.",
+    url: "https://www.netacad.com/"
+  },
+  {
+    id: 29,
+    title: "freeCodeCamp",
+    category: "Programação",
+    level: "Iniciante",
+    type: "Laboratório",
+    icon: "💻",
+    free: true,
+    description: "Plataforma de aprendizagem prática com programação, desenvolvimento web, dados e projetos.",
+    url: "https://www.freecodecamp.org/learn/"
+  },
+  {
+    id: 30,
+    title: "OWASP Web Security Testing Guide",
+    category: "Cybersecurity",
+    level: "Intermediário",
+    type: "Documentação",
+    icon: "🔎",
+    free: true,
+    description: "Guia de referência da OWASP sobre testes de segurança de aplicações web.",
+    url: "https://owasp.org/www-project-web-security-testing-guide/"
   }
 ];
