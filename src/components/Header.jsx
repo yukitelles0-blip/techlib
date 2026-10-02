@@ -5,6 +5,7 @@ const navItems = [
   ["/biblioteca", "📚 Biblioteca"],
   ["/cursos", "🎓 Cursos"],
   ["/trilhas", "🗺️ Trilhas"],
+  ["/labs", "🧪 Labs"],
   ["/sobre", "Sobre"],
 ];
 
@@ -25,14 +26,18 @@ export default function Header() {
             <NavLink
               key={path}
               to={path}
-              className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
             >
               {label}
             </NavLink>
           ))}
         </nav>
 
-        <Link className="header-cta" to="/biblioteca">Explorar</Link>
+        <Link className="header-cta" to="/biblioteca">
+          Explorar
+        </Link>
       </div>
     </header>
   );
