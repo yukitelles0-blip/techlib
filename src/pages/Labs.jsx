@@ -14,10 +14,23 @@ export default function Labs() {
       setProgress(getProgressStats(labs.length));
     };
 
+    window.addEventListener(
+      "techlib-progress-updated",
+      updateProgress
+    );
+
     window.addEventListener("storage", updateProgress);
 
     return () => {
-      window.removeEventListener("storage", updateProgress);
+      window.removeEventListener(
+        "techlib-progress-updated",
+        updateProgress
+      );
+
+      window.removeEventListener(
+        "storage",
+        updateProgress
+      );
     };
   }, []);
 
@@ -35,7 +48,8 @@ export default function Labs() {
         </span>
 
         <span>
-          <strong>{progress.completed}</strong> de {progress.total} concluídos
+          <strong>{progress.completed}</strong> de{" "}
+          {progress.total} concluídos
         </span>
       </div>
 
@@ -54,14 +68,19 @@ export default function Labs() {
         >
           <div
             className="lab-progress-fill"
-            style={{ width: `${progress.percentage}%` }}
+            style={{
+              width: `${progress.percentage}%`,
+            }}
           />
         </div>
       </div>
 
       <div className="card-grid">
         {labs.map((lab) => (
-          <LabCard key={lab.id} lab={lab} />
+          <LabCard
+            key={lab.id}
+            lab={lab}
+          />
         ))}
       </div>
     </section>
