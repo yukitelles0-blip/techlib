@@ -1,0 +1,73 @@
+import React from "react";
+import { Link, useParams } from "react-router-dom";
+import { labs } from "../data/labs";
+
+export default function LabDetail() {
+  const { id } = useParams();
+
+  const lab = labs.find((item) => item.id === Number(id));
+
+  if (!lab) {
+    return (
+      <section className="section container page-section">
+        <div className="empty-page">
+          <span>🔎</span>
+          <h1>Lab não encontrado</h1>
+          <p>O laboratório que você tentou acessar não existe.</p>
+          <Link className="primary-button" to="/labs">
+            Voltar para Labs
+          </Link>
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section className="section container page-section">
+      <div className="lab-detail">
+        <Link className="text-link" to="/labs">
+          ← Voltar para Labs
+        </Link>
+
+        <div className="lab-detail-header">
+          <span className="resource-icon">{lab.icon}</span>
+
+          <div>
+            <span className="tag">{lab.category}</span>
+            <span className="level">{lab.level}</span>
+
+            <h1>{lab.title}</h1>
+
+            <p>{lab.description}</p>
+          </div>
+        </div>
+
+        <div className="lab-detail-info">
+          <div>
+            <strong>Tipo</strong>
+            <span>{lab.type}</span>
+          </div>
+
+          <div>
+            <strong>Duração</strong>
+            <span>⏱ {lab.duration}</span>
+          </div>
+
+          <div>
+            <strong>Objetivo</strong>
+            <span>{lab.objective}</span>
+          </div>
+        </div>
+
+        <div className="lab-placeholder">
+          <span>🧪</span>
+          <h2>Atividade em preparação</h2>
+          <p>
+            A estrutura deste laboratório já está pronta. A atividade
+            interativa será adicionada nesta etapa.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
