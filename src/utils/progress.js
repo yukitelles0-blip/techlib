@@ -1,5 +1,9 @@
 const STORAGE_KEY = "techlib-lab-progress";
 
+function notifyProgressChange() {
+  window.dispatchEvent(new Event("techlib-progress-updated"));
+}
+
 export function getCompletedLabs() {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -28,10 +32,13 @@ export function markLabAsCompleted(labId) {
 
   if (!completedLabs.includes(id)) {
     completedLabs.push(id);
+
     localStorage.setItem(
       STORAGE_KEY,
       JSON.stringify(completedLabs)
     );
+
+    notifyProgressChange();
   }
 
   return completedLabs;
@@ -50,6 +57,8 @@ export function unmarkLabAsCompleted(labId) {
     JSON.stringify(updatedProgress)
   );
 
+  notifyProgressChange();
+
   return updatedProgress;
 }
 
@@ -58,9 +67,11 @@ export function getProgressStats(totalLabs) {
 
   const completed = completedLabs.length;
   const total = Number(totalLabs);
-  const percentage = total > 0
-    ? Math.round((completed / total) * 100)
-    : 0;
+
+  const percentage =
+    total > 0
+      ? Math.round((completed / total) * 100)
+      : 0;
 
   return {
     completed,
