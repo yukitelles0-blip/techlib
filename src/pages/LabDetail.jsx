@@ -10,6 +10,7 @@ import SQLActivity from "../components/SQLActivity";
 import WebActivity from "../components/WebActivity";
 import DockerActivity from "../components/DockerActivity";
 import IPInvestigationActivity from "../components/IPInvestigationActivity";
+import SecurityInvestigationActivity from "../components/SecurityInvestigationActivity";
 
 export default function LabDetail() {
   const { id } = useParams();
@@ -78,6 +79,7 @@ export default function LabDetail() {
         {lab.id === 7 && <WebActivity />}
         {lab.id === 8 && <DockerActivity />}
         {lab.id === 9 && <IPInvestigationActivity />}
+        {lab.id === 10 && <SecurityInvestigationActivity />}
       </div>
     </section>
   );
