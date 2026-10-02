@@ -7,6 +7,7 @@ import NetworkActivity from "../components/NetworkActivity";
 import LinuxActivity from "../components/LinuxActivity";
 import PythonActivity from "../components/PythonActivity";
 import SQLActivity from "../components/SQLActivity";
+import WebActivity from "../components/WebActivity";
 
 export default function LabDetail() {
   const { id } = useParams();
@@ -72,6 +73,7 @@ export default function LabDetail() {
         {lab.id === 4 && <LinuxActivity />}
         {lab.id === 5 && <PythonActivity />}
         {lab.id === 6 && <SQLActivity />}
+        {lab.id === 7 && <WebActivity />}
       </div>
     </section>
   );
