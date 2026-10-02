@@ -62,5 +62,101 @@ export const tracks = [
       "Rede no Linux",
       "Bash básico"
     ]
+  },
+  {
+    id: 5,
+    title: "Banco de Dados e SQL",
+    category: "Banco de Dados",
+    level: "Iniciante",
+    icon: "🗄️",
+    description: "Trilha introdutória para compreender bancos relacionais e desenvolver consultas SQL.",
+    steps: [
+      "Conceitos de banco de dados",
+      "Tabelas e relacionamentos",
+      "SELECT e filtros",
+      "JOINs",
+      "INSERT, UPDATE e DELETE",
+      "Projetos práticos com SQL"
+    ]
+  },
+  {
+    id: 6,
+    title: "Desenvolvimento Web",
+    category: "Desenvolvimento Web",
+    level: "Iniciante",
+    icon: "🌐",
+    description: "Caminho inicial para compreender como páginas e aplicações web são construídas.",
+    steps: [
+      "Como a Web funciona",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "APIs e HTTP",
+      "Projeto web"
+    ]
+  },
+  {
+    id: 7,
+    title: "Fundamentos de Cloud",
+    category: "Cloud",
+    level: "Iniciante",
+    icon: "☁️",
+    description: "Introdução aos principais conceitos de computação em nuvem e infraestrutura.",
+    steps: [
+      "Conceitos de Cloud Computing",
+      "IaaS, PaaS e SaaS",
+      "Máquinas virtuais",
+      "Armazenamento e bancos de dados",
+      "Redes em Cloud",
+      "Primeiro projeto em Cloud"
+    ]
+  },
+  {
+    id: 8,
+    title: "DevOps e Containers",
+    category: "DevOps",
+    level: "Iniciante",
+    icon: "⚙️",
+    description: "Trilha introdutória sobre automação, containers e práticas utilizadas em ambientes modernos de desenvolvimento.",
+    steps: [
+      "Conceitos de DevOps",
+      "Git e GitHub",
+      "Integração contínua",
+      "Containers",
+      "Docker",
+      "Introdução ao Kubernetes"
+    ]
+  },
+  {
+    id: 9,
+    title: "Dados e Power BI",
+    category: "Dados",
+    level: "Iniciante",
+    icon: "📊",
+    description: "Caminho inicial para trabalhar com dados, organização, análise e visualização de informações.",
+    steps: [
+      "Fundamentos de dados",
+      "Planilhas e organização",
+      "SQL básico",
+      "Tratamento de dados",
+      "Visualização",
+      "Dashboards com Power BI"
+    ]
+  },
+  {
+    id: 10,
+    title: "Introdução à Inteligência Artificial",
+    category: "Inteligência Artificial",
+    level: "Iniciante",
+    icon: "🤖",
+    description: "Trilha introdutória para compreender conceitos fundamentais de inteligência artificial e suas aplicações.",
+    steps: [
+      "O que é Inteligência Artificial",
+      "Machine Learning",
+      "Dados e treinamento",
+      "Modelos e algoritmos",
+      "IA generativa",
+      "Aplicações práticas"
+    ]
   }
 ];
