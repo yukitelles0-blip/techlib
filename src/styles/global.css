@@ -1806,3 +1806,782 @@ button {
     transform: scale(.9);
   }
 }
+
+/* ============================================================
+   TECHLIB — VISUAL IDENTITY UPGRADE
+   Camada visual adicionada sem alterar a estrutura/funcionalidade
+   existente.
+============================================================ */
+
+/* ---------- identidade global ---------- */
+
+:root {
+  --ink: #111827;
+  --muted: #667085;
+  --line: #e4e8f0;
+  --surface: #ffffff;
+  --surface-soft: #f5f7fb;
+  --primary: #6857f5;
+  --primary-dark: #4f3fd0;
+  --primary-soft: #efedff;
+  --cyan: #45c7f5;
+  --navy: #080d1c;
+  --navy-soft: #0e1528;
+  --shadow: 0 18px 50px rgba(15, 23, 42, .08);
+  --shadow-hover: 0 24px 65px rgba(15, 23, 42, .13);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 0%, rgba(104, 87, 245, .025), transparent 25%),
+    #f7f9fc;
+}
+
+::selection {
+  color: #fff;
+  background: var(--primary);
+}
+
+button,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ---------- pequenos detalhes de identidade ---------- */
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-dark);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 1.8px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+  opacity: .7;
+}
+
+/* ---------- header ---------- */
+
+.site-header {
+  background: rgba(255, 255, 255, .82);
+  border-bottom-color: rgba(218, 224, 235, .78);
+  box-shadow: 0 4px 25px rgba(15, 23, 42, .035);
+}
+
+.nav-wrap {
+  min-height: 78px;
+}
+
+.brand {
+  transition: transform .22s ease;
+}
+
+.brand:hover {
+  transform: translateY(-1px);
+}
+
+.brand-mark {
+  position: relative;
+  overflow: hidden;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  background:
+    linear-gradient(135deg, #5746dc, #7c6cff 60%, #55c8f6);
+  box-shadow:
+    0 10px 24px rgba(104, 87, 245, .25),
+    inset 0 1px 0 rgba(255, 255, 255, .28);
+}
+
+.brand-mark::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 12px;
+  top: -20px;
+  left: -15px;
+  transform: rotate(-35deg);
+  background: rgba(255, 255, 255, .2);
+}
+
+.nav-link {
+  position: relative;
+  padding: 10px 13px;
+  transition: color .2s ease, background .2s ease, transform .2s ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  box-shadow: inset 0 0 0 1px rgba(104, 87, 245, .08);
+}
+
+.header-cta,
+.primary-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.header-cta::after,
+.primary-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-110%);
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255,255,255,.18),
+    transparent
+  );
+  transition: transform .45s ease;
+}
+
+.header-cta:hover::after,
+.primary-button:hover::after {
+  transform: translateX(110%);
+}
+
+/* ---------- páginas internas ---------- */
+
+.page-section {
+  position: relative;
+}
+
+.page-section::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 260px;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(104, 87, 245, .08), transparent 32%),
+    radial-gradient(circle at 15% 5%, rgba(69, 199, 245, .045), transparent 28%);
+}
+
+.page-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- section headings ---------- */
+
+.section-heading {
+  position: relative;
+}
+
+.section-heading h2 {
+  font-size: clamp(28px, 4vw, 36px);
+  line-height: 1.05;
+}
+
+.section-heading p {
+  max-width: 650px;
+}
+
+/* ---------- cards gerais ---------- */
+
+.resource-card,
+.course-card,
+.track-card,
+.full-track-card,
+.about-grid article,
+.lab-activity {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(222, 227, 237, .95);
+  box-shadow:
+    0 8px 28px rgba(15, 23, 42, .045),
+    0 1px 2px rgba(15, 23, 42, .025);
+}
+
+.resource-card::before,
+.course-card::before,
+.track-card::before,
+.full-track-card::before,
+.about-grid article::before,
+.lab-activity::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  opacity: 0;
+  background: linear-gradient(90deg, var(--primary), var(--cyan));
+  transition: opacity .25s ease;
+}
+
+.resource-card:hover,
+.course-card:hover,
+.track-card:hover {
+  transform: translateY(-6px);
+  border-color: #ddd9ff;
+  box-shadow: var(--shadow-hover);
+}
+
+.resource-card:hover::before,
+.course-card:hover::before,
+.track-card:hover::before,
+.full-track-card:hover::before,
+.about-grid article:hover::before,
+.lab-activity:hover::before {
+  opacity: 1;
+}
+
+.resource-card,
+.course-card,
+.track-card {
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
+}
+
+/* ---------- recursos ---------- */
+
+.resource-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  margin: 20px 0 13px;
+  border-radius: 16px;
+  background:
+    linear-gradient(145deg, #f1efff, #f8f7ff);
+  border: 1px solid #e6e2ff;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8);
+}
+
+.resource-card h3 {
+  font-size: 19px;
+}
+
+.card-button {
+  transition: color .2s ease, transform .2s ease;
+}
+
+.card-button:hover {
+  color: var(--primary);
+}
+
+.card-button span {
+  transition: transform .2s ease;
+}
+
+.card-button:hover span {
+  transform: translateX(4px);
+}
+
+/* ---------- tags ---------- */
+
+.tag,
+.level,
+.certificate {
+  border: 1px solid transparent;
+}
+
+.tag {
+  color: #5544c9;
+  background: #f0eeff;
+  border-color: #e5e1ff;
+}
+
+.level {
+  background: #f5f6f8;
+  border-color: #eaedf2;
+}
+
+.certificate {
+  background: #eaf8f2;
+  border-color: #d7f0e4;
+}
+
+/* ---------- cursos ---------- */
+
+.course-card {
+  min-height: 160px;
+}
+
+.course-icon {
+  background:
+    linear-gradient(145deg, #efedff, #f7f6ff);
+  border: 1px solid #e5e1ff;
+  transition: transform .25s ease;
+}
+
+.course-card:hover .course-icon {
+  transform: rotate(-3deg) scale(1.05);
+}
+
+.course-content h3 {
+  font-size: 18px;
+}
+
+/* ---------- trilhas ---------- */
+
+.track-card {
+  min-height: 100%;
+}
+
+.track-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #f0eeff, #f8f9ff);
+  border: 1px solid #e4e1ff;
+}
+
+.mini-steps {
+  position: relative;
+}
+
+.mini-steps::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 9px;
+  bottom: 9px;
+  width: 1px;
+  background: #e3e0fa;
+}
+
+.mini-steps span {
+  position: relative;
+  z-index: 1;
+  background: var(--surface);
+}
+
+.mini-steps b {
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #efedff;
+}
+
+/* ---------- filtros ---------- */
+
+.filters-panel,
+.course-filters {
+  position: relative;
+  background: rgba(255,255,255,.88);
+  border-color: #e1e6ef;
+  box-shadow: 0 10px 35px rgba(15, 23, 42, .045);
+  backdrop-filter: blur(10px);
+}
+
+.search-box {
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.search-box:focus-within {
+  background: #fff;
+  border-color: #bdb5ff;
+  box-shadow: 0 0 0 4px rgba(104, 87, 245, .08);
+}
+
+.filters-panel select,
+.course-filters select {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.filters-panel select:focus,
+.course-filters select:focus {
+  border-color: #bdb5ff;
+  box-shadow: 0 0 0 4px rgba(104, 87, 245, .08);
+}
+
+/* ---------- página de trilhas ---------- */
+
+.full-track-card {
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.full-track-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: #ddd9ff;
+}
+
+.timeline-number {
+  box-shadow: 0 0 0 4px #faf9ff;
+}
+
+/* ---------- sobre ---------- */
+
+.about-hero {
+  position: relative;
+}
+
+.about-hero h1 {
+  max-width: 850px;
+}
+
+.about-grid article {
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.about-grid article:hover {
+  transform: translateY(-4px);
+  border-color: #ddd9ff;
+  box-shadow: var(--shadow);
+}
+
+.about-grid article > span {
+  display: inline-grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 15px;
+  background: #f1efff;
+}
+
+/* ---------- community ---------- */
+
+.community-banner {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(104, 87, 245, .25), transparent 28%),
+    radial-gradient(circle at 15% 100%, rgba(69, 199, 245, .09), transparent 25%),
+    var(--navy);
+}
+
+.community-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .16;
+  background-image:
+    linear-gradient(rgba(120, 110, 255, .25) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 110, 255, .25) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.community-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- footer ---------- */
+
+.site-footer {
+  position: relative;
+  background: #fbfcfe;
+}
+
+.site-footer::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(104, 87, 245, .3),
+    transparent
+  );
+}
+
+.site-footer a:not(.brand) {
+  transition: color .2s ease, transform .2s ease;
+}
+
+.site-footer a:not(.brand):hover {
+  color: var(--primary-dark) !important;
+  transform: translateX(2px);
+}
+
+/* ============================================================
+   LABS — identidade de laboratório técnico
+============================================================ */
+
+.lab-activity {
+  background:
+    linear-gradient(145deg, #ffffff, #fbfcff);
+}
+
+.lab-progress {
+  background:
+    linear-gradient(135deg, #f6f4ff, #f5f8fc);
+}
+
+.lab-activity-header > span {
+  background:
+    linear-gradient(145deg, #efedff, #f5faff);
+  border: 1px solid #e5e1ff;
+}
+
+.log-viewer {
+  position: relative;
+  background:
+    radial-gradient(circle at 80% 0%, rgba(104, 87, 245, .1), transparent 30%),
+    #080d1c;
+  box-shadow:
+    inset 0 0 35px rgba(0,0,0,.2),
+    0 12px 30px rgba(8, 13, 28, .12);
+}
+
+.log-viewer::before {
+  content: "LOG VIEW";
+  display: block;
+  margin-bottom: 12px;
+  color: #64708b;
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.log-line {
+  border-bottom: 1px solid rgba(255,255,255,.035);
+}
+
+.lab-option {
+  transition:
+    transform .18s ease,
+    border-color .18s ease,
+    background .18s ease,
+    box-shadow .18s ease;
+}
+
+.lab-option:hover {
+  transform: translateX(3px);
+  border-color: #cfc9ff;
+  box-shadow: 0 7px 20px rgba(104, 87, 245, .06);
+}
+
+.lab-question input[type="text"] {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.lab-question input[type="text"]:focus {
+  border-color: #aaa0ff;
+  box-shadow: 0 0 0 4px rgba(104, 87, 245, .09);
+}
+
+.lab-feedback {
+  animation: techlibFeedback .28s ease both;
+}
+
+@keyframes techlibFeedback {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lab-completed {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(104,87,245,.1), transparent 35%),
+    linear-gradient(135deg, #f9f8ff, #ffffff);
+}
+
+.lab-completed-icon {
+  animation: completedPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes completedPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* ---------- terminal / atividades técnicas ---------- */
+
+.terminal-viewer {
+  margin: 20px 0;
+  overflow: hidden;
+  border: 1px solid #202b45;
+  border-radius: 13px;
+  background: #080d1c;
+  box-shadow: 0 15px 35px rgba(8, 13, 28, .16);
+}
+
+.terminal-header {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 13px;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  background: rgba(255,255,255,.025);
+  color: #6d7891;
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+}
+
+.terminal-header::before {
+  content: "● ● ●";
+  color: #515b73;
+  letter-spacing: 3px;
+}
+
+.terminal-content {
+  padding: 18px;
+  overflow-x: auto;
+  color: #cbd5e8;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.terminal-prompt {
+  color: #69d2ff;
+}
+
+.terminal-warning {
+  color: #f7c66b;
+}
+
+/* ---------- progresso ---------- */
+
+.lab-progress-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 13px;
+  border: 1px solid #ddd9ff;
+  border-radius: 9px;
+  background: #f5f3ff;
+  color: var(--primary-dark);
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.lab-progress-action:hover {
+  background: #ece9ff;
+  transform: translateY(-1px);
+}
+
+/* ---------- movimento sutil ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .resource-card,
+  .course-card,
+  .track-card,
+  .full-track-card,
+  .about-grid article,
+  .lab-activity {
+    animation: cardEnter .45s ease both;
+  }
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================================
+   RESPONSIVIDADE EXTRA
+============================================================ */
+
+@media (max-width: 900px) {
+  .hero-code-window {
+    transform: none;
+  }
+
+  .hero-code-window:hover {
+    transform: translateY(-3px);
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    background: rgba(255,255,255,.94);
+  }
+
+  .brand-mark {
+    width: 39px;
+    height: 39px;
+  }
+
+  .section-heading h2 {
+    font-size: 28px;
+  }
+
+  .resource-card,
+  .course-card,
+  .track-card,
+  .full-track-card,
+  .about-grid article {
+    border-radius: 15px;
+  }
+
+  .lab-activity {
+    border-radius: 15px;
+  }
+
+  .community-banner {
+    padding: 55px 0;
+  }
+
+  .community-inner h2 {
+    line-height: 1.08;
+  }
+
+  .terminal-content {
+    font-size: 10px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 450px) {
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .section-heading h2 {
+    font-size: 25px;
+  }
+
+  .resource-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .track-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .lab-option {
+    padding: 11px;
+  }
+}
