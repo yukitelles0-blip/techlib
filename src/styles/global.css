@@ -3185,3 +3185,22 @@ select {
     }
   }
 }
+
+/* =========================================================
+   TECHLIB — ABOUT DESKTOP WIDTH FIX
+   Corrige conflito com estilos antigos da página Sobre.
+   ========================================================= */
+
+.about-hero {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+@media (min-width: 901px) {
+  .about-hero {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+}
