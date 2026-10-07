@@ -6,6 +6,7 @@ const navItems = [
   ["/cursos", "🎓 Cursos"],
   ["/trilhas", "🗺️ Trilhas"],
   ["/labs", "🧪 Labs"],
+  ["/roadmaps", "🧭 Roadmaps"],
   ["/sobre", "Sobre"],
 ];
 
@@ -13,21 +14,28 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="container nav-wrap">
+
         <Link className="brand" to="/">
           <span className="brand-mark">T</span>
+
           <span>
             <strong>TechLib</strong>
             <small>Biblioteca Tech</small>
           </span>
         </Link>
 
-        <nav className="main-nav" aria-label="Navegação principal">
+        <nav
+          className="main-nav"
+          aria-label="Navegação principal"
+        >
           {navItems.map(([path, label]) => (
             <NavLink
               key={path}
               to={path}
               className={({ isActive }) =>
-                isActive ? "nav-link active" : "nav-link"
+                isActive
+                  ? "nav-link active"
+                  : "nav-link"
               }
             >
               {label}
@@ -35,9 +43,13 @@ export default function Header() {
           ))}
         </nav>
 
-        <Link className="header-cta" to="/biblioteca">
+        <Link
+          className="header-cta"
+          to="/biblioteca"
+        >
           Explorar
         </Link>
+
       </div>
     </header>
   );
