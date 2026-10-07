@@ -37,13 +37,10 @@ export default function Roadmaps() {
               <div className="roadmap-card-content">
                 <h2>{roadmap.name}</h2>
 
-                <p>
-                  {roadmap.description}
-                </p>
+                <p>{roadmap.description}</p>
 
                 <span className="roadmap-card-link">
-                  Explorar roadmap
-                  <span aria-hidden="true"> →</span>
+                  Explorar roadmap →
                 </span>
               </div>
             </Link>
