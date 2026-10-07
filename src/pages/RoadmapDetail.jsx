@@ -20,7 +20,6 @@ export default function RoadmapDetail() {
     return (
       <section className="roadmap-detail-page">
         <div className="container">
-
           <Link
             to="/roadmaps"
             className="roadmap-back-link"
@@ -33,15 +32,12 @@ export default function RoadmapDetail() {
               ROADMAP
             </span>
 
-            <h1>
-              Roadmap não encontrado
-            </h1>
+            <h1>Roadmap não encontrado</h1>
 
             <p>
               O roadmap solicitado não existe.
             </p>
           </div>
-
         </div>
       </section>
     );
@@ -59,44 +55,33 @@ export default function RoadmapDetail() {
         </Link>
 
         <div className="roadmap-detail-hero">
-
           <span className="eyebrow">
             {roadmap.icon} ROADMAP
           </span>
 
-          <h1>
-            {roadmap.name}
-          </h1>
+          <h1>{roadmap.name}</h1>
 
-          <p>
-            {roadmap.description}
-          </p>
-
+          <p>{roadmap.description}</p>
         </div>
 
         <div className="roadmap-paths">
 
           <div className="roadmap-section-heading">
-
             <span className="eyebrow">
               CAMINHOS DE APRENDIZADO
             </span>
 
-            <h2>
-              Escolha um caminho
-            </h2>
+            <h2>Escolha um caminho</h2>
 
             <p>
               Explore os conhecimentos e tecnologias
               organizados para esta área.
             </p>
-
           </div>
 
           <div className="roadmap-paths-grid">
 
             {roadmapPaths.map((path, index) => {
-
               const pathNodes = path.nodes
                 .map((nodeId) =>
                   nodes.find(
@@ -110,58 +95,43 @@ export default function RoadmapDetail() {
                   key={path.id}
                   className="roadmap-path-card"
                 >
-
                   <div className="roadmap-path-card-number">
                     {String(index + 1).padStart(2, "0")}
                   </div>
 
                   <div className="roadmap-path-card-content">
 
-                    <h3>
-                      {path.name}
-                    </h3>
+                    <h3>{path.name}</h3>
 
-                    <p>
-                      {path.description}
-                    </p>
+                    <p>{path.description}</p>
 
                     <div className="roadmap-path-nodes">
-
                       {pathNodes.map((node) => (
                         <div
                           key={node.id}
                           className="roadmap-node-card"
                         >
-
                           <div className="roadmap-node-card-header">
-
-                            <h4>
-                              {node.name}
-                            </h4>
+                            <h4>{node.name}</h4>
 
                             <span className="roadmap-node-level">
                               {node.level}
                             </span>
-
                           </div>
 
                           <span className="roadmap-node-type">
                             {node.type}
                           </span>
-
                         </div>
                       ))}
-
                     </div>
 
                   </div>
-
                 </article>
               );
             })}
 
           </div>
-
         </div>
 
       </div>
