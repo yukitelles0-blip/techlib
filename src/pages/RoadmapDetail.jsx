@@ -91,7 +91,8 @@ export default function RoadmapDetail() {
           <p>
             Explore os conhecimentos, tecnologias
             e conexões que fazem parte deste caminho.
-            Clique em um conhecimento para ver mais detalhes.
+            Clique em um conhecimento para ver seus
+            detalhes e conexões.
           </p>
 
         </div>
