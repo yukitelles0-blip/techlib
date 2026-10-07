@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 
 import { roadmaps } from "../data/roadmaps";
 import { paths } from "../data/roadmaps/paths";
+import { nodes } from "../data/roadmaps/nodes";
 
 export default function RoadmapDetail() {
   const { id } = useParams();
@@ -84,7 +85,7 @@ export default function RoadmapDetail() {
             </h2>
 
             <p>
-              Explore os principais conhecimentos
+              Explore os conhecimentos e tecnologias
               organizados para esta área.
             </p>
 
@@ -92,47 +93,72 @@ export default function RoadmapDetail() {
 
           <div className="roadmap-paths-grid">
 
-            {roadmapPaths.map((path, index) => (
+            {roadmapPaths.map((path, index) => {
 
-              <article
-                key={path.id}
-                className="roadmap-path-card"
-              >
+              const pathNodes = path.nodes
+                .map((nodeId) =>
+                  nodes.find(
+                    (node) => node.id === nodeId
+                  )
+                )
+                .filter(Boolean);
 
-                <div className="roadmap-path-card-number">
-                  {String(index + 1).padStart(2, "0")}
-                </div>
+              return (
+                <article
+                  key={path.id}
+                  className="roadmap-path-card"
+                >
 
-                <div className="roadmap-path-card-content">
+                  <div className="roadmap-path-card-number">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
 
-                  <h3>
-                    {path.name}
-                  </h3>
+                  <div className="roadmap-path-card-content">
 
-                  <p>
-                    {path.description}
-                  </p>
+                    <h3>
+                      {path.name}
+                    </h3>
 
-                  <div className="roadmap-path-nodes">
+                    <p>
+                      {path.description}
+                    </p>
 
-                    {path.nodes.map((nodeId) => (
+                    <div className="roadmap-path-nodes">
 
-                      <span
-                        key={nodeId}
-                        className="roadmap-node-tag"
-                      >
-                        {nodeId}
-                      </span>
+                      {pathNodes.map((node) => (
 
-                    ))}
+                        <div
+                          key={node.id}
+                          className="roadmap-node-card"
+                        >
+
+                          <div className="roadmap-node-card-header">
+
+                            <h4>
+                              {node.name}
+                            </h4>
+
+                            <span className="roadmap-node-level">
+                              {node.level}
+                            </span>
+
+                          </div>
+
+                          <span className="roadmap-node-type">
+                            {node.type}
+                          </span>
+
+                        </div>
+
+                      ))}
+
+                    </div>
 
                   </div>
 
-                </div>
-
-              </article>
-
-            ))}
+                </article>
+              );
+            })}
 
           </div>
 
