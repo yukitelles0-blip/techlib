@@ -1,14 +1,36 @@
 import React from "react";
+import { Link, useParams } from "react-router-dom";
 
 export default function RoadmapDetail() {
-  return (
-    <section>
-      <div className="container">
-        <h1>Roadmap</h1>
+  const { id } = useParams();
 
-        <p>
-          Página de detalhes do roadmap.
-        </p>
+  return (
+    <section className="roadmap-detail-page">
+      <div className="container">
+
+        <Link
+          to="/roadmaps"
+          className="roadmap-back-link"
+        >
+          ← Voltar para Roadmaps
+        </Link>
+
+        <div className="roadmap-detail-hero">
+
+          <span className="eyebrow">
+            🧭 ROADMAP
+          </span>
+
+          <h1>
+            {id}
+          </h1>
+
+          <p>
+            Esta é a página de detalhes do roadmap.
+          </p>
+
+        </div>
+
       </div>
     </section>
   );
