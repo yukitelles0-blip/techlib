@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { roadmaps } from "../data/roteiros";
+import { roadmaps } from "../data/roadmaps";
+
+export default function Roadmaps() {
 
 export default function Roadmaps() {
   return (
