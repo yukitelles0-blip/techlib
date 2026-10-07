@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 
 import { roadmaps } from "../data/roadmaps";
 import { paths } from "../data/roadmaps/paths";
+import { nodes } from "../data/roadmaps/nodes";
 
 export default function RoadmapDetail() {
   const { id } = useParams();
@@ -19,6 +20,7 @@ export default function RoadmapDetail() {
     return (
       <section className="roadmap-detail-page">
         <div className="container">
+
           <Link
             to="/roadmaps"
             className="roadmap-back-link"
@@ -37,6 +39,7 @@ export default function RoadmapDetail() {
               O roadmap solicitado não existe.
             </p>
           </div>
+
         </div>
       </section>
     );
