@@ -20,6 +20,7 @@ export default function RoadmapDetail() {
     return (
       <section className="roadmap-detail-page">
         <div className="container">
+
           <Link
             to="/roadmaps"
             className="roadmap-back-link"
@@ -32,12 +33,15 @@ export default function RoadmapDetail() {
               ROADMAP
             </span>
 
-            <h1>Roadmap não encontrado</h1>
+            <h1>
+              Roadmap não encontrado
+            </h1>
 
             <p>
               O roadmap solicitado não existe.
             </p>
           </div>
+
         </div>
       </section>
     );
@@ -55,6 +59,7 @@ export default function RoadmapDetail() {
         </Link>
 
         <div className="roadmap-detail-hero">
+
           <span className="eyebrow">
             {roadmap.icon} ROADMAP
           </span>
@@ -66,11 +71,13 @@ export default function RoadmapDetail() {
           <p>
             {roadmap.description}
           </p>
+
         </div>
 
         <div className="roadmap-paths">
 
           <div className="roadmap-section-heading">
+
             <span className="eyebrow">
               CAMINHOS DE APRENDIZADO
             </span>
@@ -83,6 +90,7 @@ export default function RoadmapDetail() {
               Explore os conhecimentos e tecnologias
               organizados para esta área.
             </p>
+
           </div>
 
           <div className="roadmap-paths-grid">
@@ -124,6 +132,7 @@ export default function RoadmapDetail() {
                           key={node.id}
                           className="roadmap-node-card"
                         >
+
                           <div className="roadmap-node-card-header">
 
                             <h4>
