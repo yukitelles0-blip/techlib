@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { roadmaps } from "../data/roadmaps";
 
 export default function Roadmaps() {
-
-export default function Roadmaps() {
   return (
     <section className="roadmaps-page">
       <div className="container">
