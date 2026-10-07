@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 
 import { roadmaps } from "../data/roadmaps";
 import { paths } from "../data/roadmaps/paths";
-import { nodes } from "../data/roadmaps/nodes";
+
 
 export default function RoadmapDetail() {
   const { id } = useParams();
