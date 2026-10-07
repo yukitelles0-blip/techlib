@@ -1,3 +1,22 @@
+export const NODE_TYPES = {
+  FOUNDATION: "foundation",
+  CONCEPT: "concept",
+  TECHNOLOGY: "technology",
+  TOOL: "tool",
+  LANGUAGE: "language",
+  FRAMEWORK: "framework",
+  SPECIALIZATION: "specialization",
+  PLATFORM: "platform",
+  SERVICE: "service",
+  ORGANIZATION: "organization",
+};
+
+export const NODE_LEVELS = {
+  BEGINNER: "beginner",
+  INTERMEDIATE: "intermediate",
+  ADVANCED: "advanced",
+};
+
 export const roadmaps = [
   {
     id: "development",
@@ -6,6 +25,7 @@ export const roadmaps = [
     description:
       "Caminhos para desenvolvimento de aplicações, sistemas e software.",
   },
+
   {
     id: "cybersecurity",
     name: "Cybersecurity",
@@ -13,6 +33,7 @@ export const roadmaps = [
     description:
       "Fundamentos e especializações em segurança cibernética.",
   },
+
   {
     id: "networking",
     name: "Redes",
@@ -20,6 +41,7 @@ export const roadmaps = [
     description:
       "Fundamentos, infraestrutura e especializações em redes.",
   },
+
   {
     id: "cloud",
     name: "Cloud",
@@ -27,6 +49,7 @@ export const roadmaps = [
     description:
       "Computação em nuvem, plataformas, serviços e arquitetura.",
   },
+
   {
     id: "devops",
     name: "DevOps",
@@ -34,6 +57,7 @@ export const roadmaps = [
     description:
       "Automação, containers, CI/CD e infraestrutura.",
   },
+
   {
     id: "programming",
     name: "Programação",
@@ -41,6 +65,7 @@ export const roadmaps = [
     description:
       "Lógica, algoritmos, linguagens e desenvolvimento de software.",
   },
+
   {
     id: "databases",
     name: "Banco de Dados",
@@ -48,6 +73,7 @@ export const roadmaps = [
     description:
       "Modelagem, SQL, NoSQL, administração e segurança de dados.",
   },
+
   {
     id: "linux",
     name: "Linux",
@@ -55,6 +81,7 @@ export const roadmaps = [
     description:
       "Sistema operacional, terminal, administração e automação.",
   },
+
   {
     id: "data",
     name: "Dados",
