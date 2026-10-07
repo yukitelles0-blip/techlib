@@ -11,6 +11,7 @@ import Tracks from "./pages/Tracks";
 import Labs from "./pages/Labs";
 import LabDetail from "./pages/LabDetail";
 import Roadmaps from "./pages/Roadmaps";
+import RoadmapDetail from "./pages/RoadmapDetail";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
@@ -57,6 +58,11 @@ export default function App() {
             <Route
               path="/roadmaps"
               element={<Roadmaps />}
+            />
+
+            <Route
+              path="/roadmaps/:id"
+              element={<RoadmapDetail />}
             />
 
             <Route
