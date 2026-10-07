@@ -6,43 +6,45 @@
   position: relative;
   width: 100%;
   margin-top: 32px;
-  border: 1px solid var(--border-color, #e2e8f0);
-  border-radius: 20px;
   overflow: hidden;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+
   background:
     radial-gradient(
-      circle at 20% 20%,
+      circle at 15% 20%,
       rgba(37, 99, 235, 0.08),
-      transparent 30%
+      transparent 28%
     ),
     radial-gradient(
-      circle at 80% 70%,
+      circle at 85% 75%,
       rgba(124, 58, 237, 0.07),
-      transparent 30%
+      transparent 28%
     ),
     #f8fafc;
 }
 
 
 /* =========================================================
-   BARRA DE CONTROLES
+   TOOLBAR
    ========================================================= */
 
 .roadmap-map-toolbar {
   position: relative;
-  z-index: 20;
+  z-index: 50;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   gap: 16px;
+
   padding: 14px 18px;
 
-  border-bottom: 1px solid
-    var(--border-color, #e2e8f0);
+  border-bottom: 1px solid #e2e8f0;
 
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.96);
 
   backdrop-filter: blur(10px);
 }
@@ -51,23 +53,28 @@
 .roadmap-map-toolbar-info {
   display: flex;
   align-items: center;
+
   gap: 18px;
 
-  font-size: 13px;
   color: #64748b;
+
+  font-size: 13px;
 }
 
 
 .roadmap-map-toolbar-info span {
   display: inline-flex;
   align-items: center;
+
   gap: 6px;
 }
 
 
 .roadmap-map-toolbar-info span::before {
   content: "•";
+
   color: #2563eb;
+
   font-size: 18px;
 }
 
@@ -75,23 +82,23 @@
 .roadmap-map-controls {
   display: flex;
   align-items: center;
+
   gap: 6px;
 }
 
 
 .roadmap-map-controls button {
-  border: 1px solid #dbe3ee;
-
-  background: #ffffff;
-
-  color: #334155;
-
   min-width: 34px;
   height: 34px;
 
   padding: 0 10px;
 
+  border: 1px solid #dbe3ee;
   border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #334155;
 
   font-size: 14px;
   font-weight: 600;
@@ -107,6 +114,7 @@
 
 .roadmap-map-controls button:hover {
   background: #f1f5f9;
+
   border-color: #cbd5e1;
 }
 
@@ -121,15 +129,15 @@
 
   text-align: center;
 
+  color: #475569;
+
   font-size: 13px;
   font-weight: 600;
-
-  color: #475569;
 }
 
 
 /* =========================================================
-   ÁREA DO MAPA
+   VIEWPORT
    ========================================================= */
 
 .roadmap-map-viewport {
@@ -138,9 +146,11 @@
   width: 100%;
   height: 720px;
 
-  overflow: hidden;
+  overflow: auto;
 
   cursor: grab;
+
+  background-color: #f8fafc;
 
   background-image:
     linear-gradient(
@@ -154,6 +164,8 @@
     );
 
   background-size: 32px 32px;
+
+  scrollbar-width: thin;
 }
 
 
@@ -162,11 +174,35 @@
 }
 
 
-.roadmap-map-canvas {
-  position: absolute;
+.roadmap-map-viewport::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
 
-  top: 0;
-  left: 0;
+
+.roadmap-map-viewport::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+
+.roadmap-map-viewport::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+
+  border-radius: 10px;
+}
+
+
+.roadmap-map-viewport::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+
+/* =========================================================
+   CANVAS
+   ========================================================= */
+
+.roadmap-map-canvas {
+  position: relative;
 
   width: 1800px;
   height: 1500px;
@@ -203,20 +239,13 @@
 
   stroke: currentColor;
 
-  stroke-width: 2;
+  stroke-width: 2.5;
 
   opacity: 0.65;
 
   transition:
-    stroke 0.2s ease,
-    opacity 0.2s ease;
-}
-
-
-.roadmap-connection-prerequisite {
-  stroke-dasharray: 6 5;
-
-  color: #64748b;
+    opacity 0.2s ease,
+    stroke-width 0.2s ease;
 }
 
 
@@ -225,17 +254,24 @@
 }
 
 
-.roadmap-connection-related {
-  stroke-dasharray: 3 5;
+.roadmap-connection-prerequisite {
+  color: #64748b;
 
+  stroke-dasharray: 7 5;
+}
+
+
+.roadmap-connection-related {
   color: #8b5cf6;
+
+  stroke-dasharray: 3 6;
 }
 
 
 .roadmap-connection-used_with {
-  stroke-dasharray: 8 4;
-
   color: #0f766e;
+
+  stroke-dasharray: 9 5;
 }
 
 
@@ -257,6 +293,8 @@
 .roadmap-map-node {
   position: absolute;
 
+  box-sizing: border-box;
+
   width: 190px;
   min-height: 72px;
 
@@ -264,6 +302,7 @@
 
   display: flex;
   flex-direction: column;
+
   align-items: flex-start;
   justify-content: center;
 
@@ -274,7 +313,7 @@
 
   border-radius: 12px;
 
-  background: rgba(255, 255, 255, 0.97);
+  background: rgba(255, 255, 255, 0.98);
 
   box-shadow:
     0 4px 12px rgba(15, 23, 42, 0.08);
@@ -291,35 +330,27 @@
 
 
 .roadmap-map-node:hover {
+  z-index: 10;
+
   transform: translateY(-3px);
 
   background: #ffffff;
 
   box-shadow:
-    0 10px 25px rgba(15, 23, 42, 0.13);
+    0 12px 28px rgba(15, 23, 42, 0.14);
 }
 
 
 .roadmap-map-node.selected {
+  z-index: 20;
+
   background: #ffffff;
+
+  transform: translateY(-3px);
 
   box-shadow:
     0 0 0 4px rgba(37, 99, 235, 0.12),
-    0 12px 28px rgba(15, 23, 42, 0.16);
-
-  transform: translateY(-3px);
-}
-
-
-.roadmap-map-node strong {
-  width: 100%;
-
-  color: #0f172a;
-
-  font-size: 15px;
-  line-height: 1.25;
-
-  white-space: normal;
+    0 14px 32px rgba(15, 23, 42, 0.16);
 }
 
 
@@ -334,41 +365,54 @@
 }
 
 
-.roadmap-map-node-level {
-  font-size: 11px;
+.roadmap-map-node strong {
+  width: 100%;
 
+  color: #0f172a;
+
+  font-size: 15px;
+
+  line-height: 1.25;
+}
+
+
+.roadmap-map-node-level {
   color: #64748b;
+
+  font-size: 11px;
 
   text-transform: capitalize;
 }
 
 
 /* =========================================================
-   PAINEL DO NÓ
+   PAINEL LATERAL
    ========================================================= */
 
 .roadmap-node-panel {
   position: absolute;
 
-  z-index: 30;
+  z-index: 100;
 
   top: 74px;
   right: 18px;
 
   width: 340px;
-  max-width: calc(100% - 36px);
 
+  max-width: calc(100% - 36px);
   max-height: calc(100% - 96px);
 
   overflow-y: auto;
 
   padding: 24px;
 
+  box-sizing: border-box;
+
   border: 1px solid #e2e8f0;
 
   border-radius: 16px;
 
-  background: rgba(255, 255, 255, 0.97);
+  background: rgba(255, 255, 255, 0.98);
 
   box-shadow:
     0 20px 50px rgba(15, 23, 42, 0.16);
@@ -382,11 +426,13 @@
 @keyframes roadmapPanelIn {
   from {
     opacity: 0;
-    transform: translateX(12px);
+
+    transform: translateX(15px);
   }
 
   to {
     opacity: 1;
+
     transform: translateX(0);
   }
 }
@@ -410,13 +456,10 @@
   color: #475569;
 
   font-size: 20px;
+
   line-height: 1;
 
   cursor: pointer;
-
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
 }
 
 
@@ -530,15 +573,15 @@
 
 
 /* =========================================================
-   RESPONSIVIDADE
+   MOBILE
    ========================================================= */
 
 @media (max-width: 768px) {
 
   .roadmap-map-toolbar {
-    align-items: flex-start;
-
     flex-direction: column;
+
+    align-items: flex-start;
   }
 
 
