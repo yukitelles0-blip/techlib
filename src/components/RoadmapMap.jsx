@@ -3,8 +3,8 @@ import React, { useMemo, useState } from "react";
 import { nodes } from "../data/roadmaps/nodes";
 import { connections } from "../data/roadmaps/connections";
 
-const NODE_WIDTH = 190;
-const NODE_HEIGHT = 72;
+const NODE_WIDTH = 220;
+const NODE_HEIGHT = 90;
 
 const COLORS = {
   foundation: "#2563eb",
@@ -23,18 +23,44 @@ function getNodeColor(type) {
   return COLORS[type] || "#475569";
 }
 
-export default function RoadmapMap({ roadmapId, roadmapPaths }) {
+function getNodeLabel(type) {
+  const labels = {
+    foundation: "Fundamento",
+    concept: "Conceito",
+    technology: "Tecnologia",
+    tool: "Ferramenta",
+    language: "Linguagem",
+    framework: "Framework",
+    specialization: "Especialização",
+    platform: "Plataforma",
+    service: "Serviço",
+    organization: "Organização",
+  };
+
+  return labels[type] || type;
+}
+
+export default function RoadmapMap({
+  roadmapId,
+  roadmapPaths = [],
+}) {
   const [selectedNode, setSelectedNode] = useState(null);
   const [zoom, setZoom] = useState(1);
-  const [offset, setOffset] = useState({
-    x: 0,
-    y: 0,
-  });
+
+  /*
+   * =========================================================
+   * NODES DO ROADMAP
+   * =========================================================
+   */
 
   const roadmapNodeIds = useMemo(() => {
     const ids = new Set();
 
     roadmapPaths.forEach((path) => {
+      if (!Array.isArray(path.nodes)) {
+        return;
+      }
+
       path.nodes.forEach((nodeId) => {
         ids.add(nodeId);
       });
@@ -49,6 +75,12 @@ export default function RoadmapMap({ roadmapId, roadmapPaths }) {
     );
   }, [roadmapNodeIds]);
 
+  /*
+   * =========================================================
+   * CONNECTIONS
+   * =========================================================
+   */
+
   const roadmapConnections = useMemo(() => {
     return connections.filter(
       (connection) =>
@@ -57,42 +89,62 @@ export default function RoadmapMap({ roadmapId, roadmapPaths }) {
     );
   }, [roadmapNodeIds]);
 
+  /*
+   * =========================================================
+   * POSIÇÕES
+   *
+   * Cada PATH vira uma coluna.
+   * =========================================================
+   */
+
   const positions = useMemo(() => {
     const result = {};
 
-    const columns = [
-      100,
-      420,
-      740,
-      1060,
-      1380,
-    ];
+    const columnWidth = 340;
+    const rowHeight = 150;
 
     roadmapPaths.forEach((path, pathIndex) => {
-      const x = columns[pathIndex] || 100;
+      if (!Array.isArray(path.nodes)) {
+        return;
+      }
 
       path.nodes.forEach((nodeId, nodeIndex) => {
-        result[nodeId] = {
-          x,
-          y: 100 + nodeIndex * 130,
-        };
+        /*
+         * Não sobrescreve uma posição já existente.
+         *
+         * Isso evita que um mesmo node apareça
+         * em posições diferentes quando pertence
+         * a mais de um caminho.
+         */
+        if (!result[nodeId]) {
+          result[nodeId] = {
+            x: 80 + pathIndex * columnWidth,
+            y: 80 + nodeIndex * rowHeight,
+          };
+        }
       });
     });
 
     return result;
   }, [roadmapPaths]);
 
-  function getNodePosition(nodeId) {
+  function getPosition(nodeId) {
     return (
       positions[nodeId] || {
-        x: 100,
-        y: 100,
+        x: 80,
+        y: 80,
       }
     );
   }
 
+  /*
+   * =========================================================
+   * CONEXÕES SVG
+   * =========================================================
+   */
+
   function getConnectionPoint(nodeId, side) {
-    const position = getNodePosition(nodeId);
+    const position = getPosition(nodeId);
 
     if (side === "from") {
       return {
@@ -107,6 +159,37 @@ export default function RoadmapMap({ roadmapId, roadmapPaths }) {
     };
   }
 
+  function createConnectionPath(connection) {
+    const from = getConnectionPoint(
+      connection.from,
+      "from"
+    );
+
+    const to = getConnectionPoint(
+      connection.to,
+      "to"
+    );
+
+    const distance = Math.max(
+      60,
+      Math.abs(to.x - from.x) / 2
+    );
+
+    return `
+      M ${from.x} ${from.y}
+      C
+      ${from.x + distance} ${from.y},
+      ${to.x - distance} ${to.y},
+      ${to.x} ${to.y}
+    `;
+  }
+
+  /*
+   * =========================================================
+   * ZOOM
+   * =========================================================
+   */
+
   function zoomIn() {
     setZoom((current) =>
       Math.min(current + 0.1, 1.8)
@@ -119,34 +202,70 @@ export default function RoadmapMap({ roadmapId, roadmapPaths }) {
     );
   }
 
-  function resetView() {
+  function resetZoom() {
     setZoom(1);
-    setOffset({
-      x: 0,
-      y: 0,
-    });
   }
 
-  function handleWheel(event) {
-    event.preventDefault();
+  /*
+   * =========================================================
+   * DIMENSÕES DO MAPA
+   * =========================================================
+   */
 
-    const direction =
-      event.deltaY > 0 ? -0.1 : 0.1;
+  const mapWidth = Math.max(
+    1200,
+    roadmapPaths.length * 340 + 200
+  );
 
-    setZoom((current) =>
-      Math.min(
-        Math.max(current + direction, 0.6),
-        1.8
-      )
-    );
-  }
+  const mapHeight = Math.max(
+    900,
+    roadmapNodes.length * 120
+  );
+
+  /*
+   * =========================================================
+   * RENDER
+   * =========================================================
+   */
 
   return (
-    <div className="roadmap-map-wrapper">
+    <section
+      style={{
+        marginTop: "32px",
+        border: "1px solid #e2e8f0",
+        borderRadius: "20px",
+        background: "#f8fafc",
+        overflow: "hidden",
+      }}
+    >
+      {/* =====================================================
+          TOOLBAR
+      ===================================================== */}
 
-      <div className="roadmap-map-toolbar">
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: "20px",
+          padding: "16px 20px",
+          borderBottom: "1px solid #e2e8f0",
+          background: "#ffffff",
+          flexWrap: "wrap",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            gap: "20px",
+            alignItems: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          <strong>
+            🧭 Mapa de aprendizagem
+          </strong>
 
-        <div className="roadmap-map-toolbar-info">
           <span>
             {roadmapNodes.length} conhecimentos
           </span>
@@ -156,277 +275,446 @@ export default function RoadmapMap({ roadmapId, roadmapPaths }) {
           </span>
         </div>
 
-        <div className="roadmap-map-controls">
-
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+          }}
+        >
           <button
             type="button"
             onClick={zoomOut}
-            aria-label="Diminuir zoom"
+            style={{
+              width: "36px",
+              height: "36px",
+              border: "1px solid #cbd5e1",
+              borderRadius: "8px",
+              background: "#ffffff",
+              cursor: "pointer",
+              fontSize: "20px",
+            }}
           >
             −
           </button>
 
-          <span>
+          <span
+            style={{
+              minWidth: "55px",
+              textAlign: "center",
+              fontWeight: "600",
+            }}
+          >
             {Math.round(zoom * 100)}%
           </span>
 
           <button
             type="button"
             onClick={zoomIn}
-            aria-label="Aumentar zoom"
+            style={{
+              width: "36px",
+              height: "36px",
+              border: "1px solid #cbd5e1",
+              borderRadius: "8px",
+              background: "#ffffff",
+              cursor: "pointer",
+              fontSize: "20px",
+            }}
           >
             +
           </button>
 
           <button
             type="button"
-            onClick={resetView}
+            onClick={resetZoom}
+            style={{
+              height: "36px",
+              padding: "0 12px",
+              border: "1px solid #cbd5e1",
+              borderRadius: "8px",
+              background: "#ffffff",
+              cursor: "pointer",
+              fontWeight: "600",
+            }}
           >
             Resetar
           </button>
-
         </div>
       </div>
 
-      <div
-        className="roadmap-map-viewport"
-        onWheel={handleWheel}
-      >
+      {/* =====================================================
+          MAPA
+      ===================================================== */}
 
+      <div
+        style={{
+          width: "100%",
+          height: "700px",
+          overflow: "auto",
+          position: "relative",
+          background:
+            "radial-gradient(circle, #e2e8f0 1px, transparent 1px)",
+          backgroundSize: "24px 24px",
+        }}
+      >
         <div
-          className="roadmap-map-canvas"
           style={{
-            transform: `
-              translate(${offset.x}px, ${offset.y}px)
-              scale(${zoom})
-            `,
+            position: "relative",
+            width: `${mapWidth * zoom}px`,
+            height: `${mapHeight * zoom}px`,
+            minWidth: `${mapWidth}px`,
+            minHeight: `${mapHeight}px`,
           }}
         >
-
-          <svg
-            className="roadmap-map-connections"
-            width="1800"
-            height="1500"
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: `${mapWidth}px`,
+              height: `${mapHeight}px`,
+              transform: `scale(${zoom})`,
+              transformOrigin: "top left",
+            }}
           >
+            {/* =================================================
+                SVG DAS CONEXÕES
+            ================================================= */}
 
-            <defs>
-              <marker
-                id="roadmap-arrow"
-                markerWidth="8"
-                markerHeight="8"
-                refX="7"
-                refY="4"
-                orient="auto"
-              >
-                <path
-                  d="M0,0 L8,4 L0,8 Z"
-                  fill="currentColor"
-                />
-              </marker>
-            </defs>
+            <svg
+              width={mapWidth}
+              height={mapHeight}
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                pointerEvents: "none",
+                overflow: "visible",
+              }}
+            >
+              <defs>
+                <marker
+                  id={`roadmap-arrow-${roadmapId}`}
+                  markerWidth="8"
+                  markerHeight="8"
+                  refX="7"
+                  refY="4"
+                  orient="auto"
+                >
+                  <path
+                    d="M0,0 L8,4 L0,8 Z"
+                    fill="#94a3b8"
+                  />
+                </marker>
+              </defs>
 
-            {roadmapConnections.map(
-              (connection, index) => {
-
-                const from =
-                  getConnectionPoint(
-                    connection.from,
-                    "from"
-                  );
-
-                const to =
-                  getConnectionPoint(
-                    connection.to,
-                    "to"
-                  );
-
-                const distance =
-                  Math.max(
-                    80,
-                    Math.abs(to.x - from.x) / 2
-                  );
-
-                return (
+              {roadmapConnections.map(
+                (connection, index) => (
                   <path
                     key={`${connection.from}-${connection.to}-${index}`}
-                    d={`
-                      M ${from.x} ${from.y}
-                      C
-                      ${from.x + distance} ${from.y},
-                      ${to.x - distance} ${to.y},
-                      ${to.x} ${to.y}
-                    `}
-                    className={`roadmap-connection roadmap-connection-${connection.type}`}
-                    markerEnd="url(#roadmap-arrow)"
+                    d={createConnectionPath(
+                      connection
+                    )}
+                    fill="none"
+                    stroke="#94a3b8"
+                    strokeWidth="2"
+                    markerEnd={`url(#roadmap-arrow-${roadmapId})`}
                   />
-                );
-              }
-            )}
+                )
+              )}
+            </svg>
 
-          </svg>
-
-          <div className="roadmap-map-nodes">
+            {/* =================================================
+                NODES
+            ================================================= */}
 
             {roadmapNodes.map((node) => {
+              const position = getPosition(
+                node.id
+              );
 
-              const position =
-                getNodePosition(node.id);
+              const color = getNodeColor(
+                node.type
+              );
 
-              const isSelected =
+              const selected =
                 selectedNode?.id === node.id;
 
               return (
                 <button
                   key={node.id}
                   type="button"
-                  className={`roadmap-map-node ${
-                    isSelected
-                      ? "selected"
-                      : ""
-                  }`}
-                  style={{
-                    left: position.x,
-                    top: position.y,
-                    borderColor:
-                      getNodeColor(node.type),
-                  }}
                   onClick={() =>
                     setSelectedNode(node)
                   }
+                  style={{
+                    position: "absolute",
+                    left: `${position.x}px`,
+                    top: `${position.y}px`,
+                    width: `${NODE_WIDTH}px`,
+                    minHeight: `${NODE_HEIGHT}px`,
+                    padding: "12px 14px",
+                    border: `2px solid ${color}`,
+                    borderRadius: "14px",
+                    background: "#ffffff",
+                    boxShadow: selected
+                      ? `0 0 0 4px ${color}22, 0 8px 20px rgba(15,23,42,.12)`
+                      : "0 4px 12px rgba(15,23,42,.08)",
+                    cursor: "pointer",
+                    textAlign: "left",
+                    transition:
+                      "transform .15s ease, box-shadow .15s ease",
+                    zIndex: selected ? 10 : 2,
+                  }}
                 >
-
                   <span
-                    className="roadmap-map-node-type"
                     style={{
-                      color:
-                        getNodeColor(node.type),
+                      display: "block",
+                      marginBottom: "5px",
+                      color,
+                      fontSize: "11px",
+                      fontWeight: "700",
+                      textTransform: "uppercase",
+                      letterSpacing: ".05em",
                     }}
                   >
-                    {node.type}
+                    {getNodeLabel(node.type)}
                   </span>
 
-                  <strong>
+                  <strong
+                    style={{
+                      display: "block",
+                      color: "#0f172a",
+                      fontSize: "15px",
+                      lineHeight: "1.3",
+                    }}
+                  >
                     {node.name}
                   </strong>
 
-                  <span className="roadmap-map-node-level">
+                  <span
+                    style={{
+                      display: "block",
+                      marginTop: "5px",
+                      color: "#64748b",
+                      fontSize: "12px",
+                    }}
+                  >
                     {node.level}
                   </span>
-
                 </button>
               );
             })}
-
           </div>
-
         </div>
-
       </div>
 
-      {selectedNode && (
-        <aside className="roadmap-node-panel">
+      {/* =====================================================
+          LEGENDA
+      ===================================================== */}
 
+      <div
+        style={{
+          display: "flex",
+          gap: "14px",
+          flexWrap: "wrap",
+          padding: "16px 20px",
+          borderTop: "1px solid #e2e8f0",
+          background: "#ffffff",
+        }}
+      >
+        {Object.entries(COLORS).map(
+          ([type, color]) => (
+            <div
+              key={type}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "6px",
+                fontSize: "12px",
+                color: "#475569",
+              }}
+            >
+              <span
+                style={{
+                  width: "10px",
+                  height: "10px",
+                  borderRadius: "50%",
+                  background: color,
+                }}
+              />
+
+              {getNodeLabel(type)}
+            </div>
+          )
+        )}
+      </div>
+
+      {/* =====================================================
+          PAINEL DO NODE
+      ===================================================== */}
+
+      {selectedNode && (
+        <aside
+          style={{
+            position: "relative",
+            padding: "24px",
+            borderTop: "1px solid #e2e8f0",
+            background: "#ffffff",
+          }}
+        >
           <button
             type="button"
-            className="roadmap-node-panel-close"
             onClick={() =>
               setSelectedNode(null)
             }
-            aria-label="Fechar painel"
+            style={{
+              position: "absolute",
+              top: "16px",
+              right: "16px",
+              width: "34px",
+              height: "34px",
+              border: "1px solid #cbd5e1",
+              borderRadius: "8px",
+              background: "#ffffff",
+              cursor: "pointer",
+              fontSize: "20px",
+            }}
           >
             ×
           </button>
 
           <span
-            className="eyebrow"
             style={{
-              color:
-                getNodeColor(
-                  selectedNode.type
-                ),
+              color: getNodeColor(
+                selectedNode.type
+              ),
+              fontSize: "12px",
+              fontWeight: "700",
+              textTransform: "uppercase",
             }}
           >
-            {selectedNode.type}
+            {getNodeLabel(
+              selectedNode.type
+            )}
           </span>
 
-          <h2>
+          <h2
+            style={{
+              margin:
+                "6px 50px 8px 0",
+              color: "#0f172a",
+            }}
+          >
             {selectedNode.name}
           </h2>
 
-          <div className="roadmap-node-panel-meta">
-
-            <span>
-              Nível: {selectedNode.level}
-            </span>
-
-            <span>
-              Área: {selectedNode.area}
-            </span>
-
-          </div>
-
-          <p>
-            Este conhecimento faz parte
-            do caminho de aprendizagem
-            de {roadmapId}.
+          <p
+            style={{
+              margin: "0 0 12px",
+              color: "#64748b",
+            }}
+          >
+            Nível: {selectedNode.level}
           </p>
 
-          <div className="roadmap-node-panel-connections">
+          <p
+            style={{
+              margin: 0,
+              color: "#475569",
+            }}
+          >
+            Área: {selectedNode.area}
+          </p>
 
-            <h3>
+          <div
+            style={{
+              marginTop: "20px",
+            }}
+          >
+            <strong>
               Conexões
-            </h3>
+            </strong>
 
-            {roadmapConnections
-              .filter(
-                (connection) =>
-                  connection.from ===
-                    selectedNode.id ||
-                  connection.to ===
-                    selectedNode.id
-              )
-              .map(
-                (connection, index) => {
-
-                  const otherId =
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "8px",
+                marginTop: "10px",
+              }}
+            >
+              {roadmapConnections
+                .filter(
+                  (connection) =>
                     connection.from ===
-                    selectedNode.id
-                      ? connection.to
-                      : connection.from;
+                      selectedNode.id ||
+                    connection.to ===
+                      selectedNode.id
+                )
+                .map(
+                  (connection, index) => {
+                    const otherId =
+                      connection.from ===
+                      selectedNode.id
+                        ? connection.to
+                        : connection.from;
 
-                  const otherNode =
-                    nodes.find(
-                      (node) =>
-                        node.id ===
-                        otherId
+                    const otherNode =
+                      nodes.find(
+                        (item) =>
+                          item.id ===
+                          otherId
+                      );
+
+                    if (!otherNode) {
+                      return null;
+                    }
+
+                    return (
+                      <div
+                        key={`${connection.from}-${connection.to}-${index}`}
+                        style={{
+                          padding:
+                            "10px 12px",
+                          border:
+                            "1px solid #e2e8f0",
+                          borderRadius:
+                            "10px",
+                          background:
+                            "#f8fafc",
+                        }}
+                      >
+                        <span
+                          style={{
+                            display:
+                              "block",
+                            color:
+                              "#64748b",
+                            fontSize:
+                              "11px",
+                            textTransform:
+                              "uppercase",
+                          }}
+                        >
+                          {
+                            connection.type
+                          }
+                        </span>
+
+                        <strong>
+                          {
+                            otherNode.name
+                          }
+                        </strong>
+                      </div>
                     );
-
-                  if (!otherNode) {
-                    return null;
                   }
-
-                  return (
-                    <div
-                      key={`${connection.from}-${connection.to}-${index}`}
-                      className="roadmap-node-panel-connection"
-                    >
-                      <span>
-                        {connection.type}
-                      </span>
-
-                      <strong>
-                        {otherNode.name}
-                      </strong>
-                    </div>
-                  );
-                }
-              )}
-
+                )}
+            </div>
           </div>
-
         </aside>
       )}
-
-    </div>
+    </section>
   );
 }
