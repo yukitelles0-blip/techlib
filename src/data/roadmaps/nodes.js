@@ -1486,6 +1486,7 @@ export const nodes = [
   },
 
   {
+     {
     id: "big-data",
     name: "Big Data",
     type: NODE_TYPES.CONCEPT,
@@ -1494,3 +1495,5 @@ export const nodes = [
     tags: ["big-data", "dados", "data-engineering"],
   },
 ];
+
+console.log("TechLib nodes carregados:", nodes.length);
