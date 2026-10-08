@@ -660,6 +660,242 @@ export const nodes = [
     tags: ["big-data", "dados", "data-engineering"],
   },
 
+  // =========================================================
+  // DESENVOLVIMENTO
+  // =========================================================
+
+  // ---------------------------------------------------------
+  // FUNDAMENTOS
+  // ---------------------------------------------------------
+
+  {
+    id: "logic-programming",
+    name: "Lógica de Programação",
+    type: NODE_TYPES.FOUNDATION,
+    level: NODE_LEVELS.BEGINNER,
+    area: "development",
+    tags: ["development", "programming", "logic"],
+  },
+
+  {
+    id: "algorithms",
+    name: "Algoritmos",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "development",
+    tags: ["development", "programming", "algorithms"],
+  },
+
+  {
+    id: "data-structures",
+    name: "Estruturas de Dados",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["development", "programming", "data-structures"],
+  },
+
+  {
+    id: "apis",
+    name: "APIs",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["development", "web", "api"],
+  },
+
+  {
+    id: "json",
+    name: "JSON",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "development",
+    tags: ["development", "web", "data"],
+  },
+
+  // ---------------------------------------------------------
+  // FRONT-END
+  // ---------------------------------------------------------
+
+  {
+    id: "html",
+    name: "HTML",
+    type: NODE_TYPES.TECHNOLOGY,
+    level: NODE_LEVELS.BEGINNER,
+    area: "development",
+    tags: ["development", "frontend", "web"],
+  },
+
+  {
+    id: "css",
+    name: "CSS",
+    type: NODE_TYPES.TECHNOLOGY,
+    level: NODE_LEVELS.BEGINNER,
+    area: "development",
+    tags: ["development", "frontend", "web"],
+  },
+
+  {
+    id: "dom",
+    name: "DOM",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["development", "frontend", "web", "javascript"],
+  },
+
+  {
+    id: "typescript",
+    name: "TypeScript",
+    type: NODE_TYPES.LANGUAGE,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["development", "frontend", "programming"],
+  },
+
+  {
+    id: "react",
+    name: "React",
+    type: NODE_TYPES.FRAMEWORK,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["development", "frontend", "javascript"],
+  },
+
+  {
+    id: "vite",
+    name: "Vite",
+    type: NODE_TYPES.TOOL,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["development", "frontend", "javascript"],
+  },
+
+  {
+    id: "web-accessibility",
+    name: "Acessibilidade Web",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["development", "frontend", "web"],
+  },
+
+  {
+    id: "frontend-testing",
+    name: "Testes Front-end",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.ADVANCED,
+    area: "development",
+    tags: ["development", "frontend", "testing"],
+  },
+
+  // ---------------------------------------------------------
+  // BACK-END
+  // ---------------------------------------------------------
+
+  {
+    id: "nodejs",
+    name: "Node.js",
+    type: NODE_TYPES.PLATFORM,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["development", "backend", "javascript"],
+  },
+
+  {
+    id: "rest-api",
+    name: "APIs REST",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["development", "backend", "api", "web"],
+  },
+
+  {
+    id: "backend-testing",
+    name: "Testes Back-end",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.ADVANCED,
+    area: "development",
+    tags: ["development", "backend", "testing"],
+  },
+
+  {
+    id: "application-security",
+    name: "Segurança de Aplicações",
+    type: NODE_TYPES.SPECIALIZATION,
+    level: NODE_LEVELS.ADVANCED,
+    area: "development",
+    tags: ["development", "backend", "security", "appsec"],
+  },
+
+  // ---------------------------------------------------------
+  // ENGENHARIA DE SOFTWARE
+  // ---------------------------------------------------------
+
+  {
+    id: "clean-code",
+    name: "Clean Code",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["development", "software-engineering"],
+  },
+
+  {
+    id: "solid",
+    name: "SOLID",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["development", "software-engineering", "architecture"],
+  },
+
+  {
+    id: "design-patterns",
+    name: "Design Patterns",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.ADVANCED,
+    area: "development",
+    tags: ["development", "software-engineering", "architecture"],
+  },
+
+  {
+    id: "software-architecture",
+    name: "Arquitetura de Software",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.ADVANCED,
+    area: "development",
+    tags: ["development", "software-engineering", "architecture"],
+  },
+
+  {
+    id: "software-testing",
+    name: "Testes de Software",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["development", "software-engineering", "testing"],
+  },
+
+  {
+    id: "code-review",
+    name: "Code Review",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["development", "software-engineering", "git"],
+  },
+
+  {
+    id: "documentation",
+    name: "Documentação",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "development",
+    tags: ["development", "software-engineering"],
+  },
+
 ];
 
 console.log("TechLib nodes carregados:", nodes.length);
