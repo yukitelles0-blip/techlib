@@ -47,6 +47,10 @@ export default function RoadmapMap({
   const [selectedNode, setSelectedNode] = useState(null);
   const [zoom, setZoom] = useState(1);
 
+  // =========================================================
+  // NÓS DO ROADMAP
+  // =========================================================
+
   const roadmapNodeIds = useMemo(() => {
     const ids = new Set();
 
@@ -67,19 +71,22 @@ export default function RoadmapMap({
     );
   }, [roadmapNodeIds]);
 
+  // =========================================================
+  // CONEXÕES DO ROADMAP
+  // =========================================================
+
   const roadmapConnections = useMemo(() => {
     return connections.filter(
       (connection) =>
+        connection.roadmapId === roadmapId &&
         roadmapNodeIds.has(connection.from) &&
         roadmapNodeIds.has(connection.to)
     );
-  }, [roadmapNodeIds]);
+  }, [roadmapId, roadmapNodeIds]);
 
-  /*
-   * ---------------------------------------------------------
-   * POSIÇÕES
-   * ---------------------------------------------------------
-   */
+  // =========================================================
+  // POSIÇÕES
+  // =========================================================
 
   const positions = useMemo(() => {
     const result = {};
@@ -112,11 +119,9 @@ export default function RoadmapMap({
     );
   }
 
-  /*
-   * ---------------------------------------------------------
-   * CONEXÕES
-   * ---------------------------------------------------------
-   */
+  // =========================================================
+  // CONEXÕES
+  // =========================================================
 
   function getConnectionPoint(nodeId, side) {
     const position = getPosition(nodeId);
@@ -159,11 +164,9 @@ export default function RoadmapMap({
     `;
   }
 
-  /*
-   * ---------------------------------------------------------
-   * ZOOM
-   * ---------------------------------------------------------
-   */
+  // =========================================================
+  // ZOOM
+  // =========================================================
 
   function zoomIn() {
     setZoom((current) =>
@@ -181,11 +184,9 @@ export default function RoadmapMap({
     setZoom(1);
   }
 
-  /*
-   * ---------------------------------------------------------
-   * DIMENSÕES
-   * ---------------------------------------------------------
-   */
+  // =========================================================
+  // DIMENSÕES
+  // =========================================================
 
   const mapWidth = Math.max(
     1200,
@@ -208,16 +209,16 @@ export default function RoadmapMap({
     largestPath * 125 + 140
   );
 
-  /*
-   * ---------------------------------------------------------
-   * RENDER
-   * ---------------------------------------------------------
-   */
+  // =========================================================
+  // RENDER
+  // =========================================================
 
   return (
     <div className="roadmap-map-wrapper">
 
-      {/* TOOLBAR */}
+      {/* =====================================================
+          TOOLBAR
+      ===================================================== */}
 
       <div className="roadmap-map-toolbar">
 
@@ -272,7 +273,9 @@ export default function RoadmapMap({
 
       </div>
 
-      {/* VIEWPORT */}
+      {/* =====================================================
+          VIEWPORT
+      ===================================================== */}
 
       <div className="roadmap-map-viewport">
 
@@ -286,7 +289,9 @@ export default function RoadmapMap({
           }}
         >
 
-          {/* CONEXÕES */}
+          {/* =================================================
+              CONEXÕES
+          ================================================= */}
 
           <svg
             className="roadmap-map-connections"
@@ -324,7 +329,9 @@ export default function RoadmapMap({
 
           </svg>
 
-          {/* NODES */}
+          {/* =================================================
+              NÓS
+          ================================================= */}
 
           <div className="roadmap-map-nodes">
 
@@ -380,7 +387,9 @@ export default function RoadmapMap({
 
       </div>
 
-      {/* LEGENDA */}
+      {/* =====================================================
+          LEGENDA
+      ===================================================== */}
 
       <div className="roadmap-map-legend">
 
@@ -390,6 +399,7 @@ export default function RoadmapMap({
               key={type}
               className="roadmap-map-legend-item"
             >
+
               <span
                 className="roadmap-map-legend-dot"
                 style={{
@@ -399,15 +409,19 @@ export default function RoadmapMap({
               />
 
               {label}
+
             </span>
           )
         )}
 
       </div>
 
-      {/* PAINEL */}
+      {/* =====================================================
+          PAINEL DO NÓ
+      ===================================================== */}
 
       {selectedNode && (
+
         <aside className="roadmap-node-panel">
 
           <button
@@ -512,6 +526,7 @@ export default function RoadmapMap({
           </div>
 
         </aside>
+
       )}
 
     </div>
