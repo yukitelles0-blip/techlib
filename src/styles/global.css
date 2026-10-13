@@ -2168,3 +2168,681 @@ img {
     font-size: 27px;
   }
 }
+
+/* =========================================================
+TECHLIB — DARK TECHNOLOGY THEME
+Camada visual complementar — adicionar ao final do CSS
+========================================================= */
+
+:root {
+color-scheme: dark;
+
+--ink: #edf2ff;
+--muted: #a1aec5;
+--line: #293650;
+--surface: #151d30;
+--surface-soft: #10182a;
+
+--primary: #8b7cff;
+--primary-dark: #a69bff;
+--primary-soft: #292448;
+
+--navy: #080d19;
+--success: #42d6a4;
+--warning: #f5c56a;
+--danger: #ff777f;
+
+--shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+--shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+html {
+color-scheme: dark;
+background: #0b1020;
+}
+
+body {
+color: var(--ink);
+background: #0b1020;
+}
+
+::selection {
+color: #ffffff;
+background: #5143d6;
+}
+
+/* Acessibilidade e foco */
+
+:focus-visible {
+outline: 2px solid #a69bff;
+outline-offset: 3px;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+-webkit-tap-highlight-color: transparent;
+}
+
+/* Cabeçalho e navegação */
+
+.site-header {
+border-bottom-color: rgba(139, 124, 255, 0.16);
+background: rgba(8, 13, 25, 0.88);
+box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.brand strong {
+color: #f1f4ff;
+}
+
+.brand small {
+color: #99a8c2;
+}
+
+.brand-mark {
+background: linear-gradient(135deg, #7564ff, #42bfe5);
+box-shadow: 0 0 26px rgba(117, 100, 255, 0.24);
+}
+
+.nav-link {
+color: #a1aec5;
+}
+
+.nav-link:hover {
+color: #ffffff;
+background: #1a2340;
+}
+
+.nav-link.active {
+color: #c4bcff;
+background: #292448;
+}
+
+.header-cta {
+color: #ffffff;
+background: linear-gradient(135deg, #7564ff, #5544d7);
+box-shadow: 0 8px 24px rgba(117, 100, 255, 0.18);
+}
+
+/* Botões e links */
+
+.primary-button {
+color: #ffffff;
+background: linear-gradient(135deg, #7564ff, #5544d7);
+box-shadow: 0 10px 26px rgba(117, 100, 255, 0.2);
+}
+
+.primary-button:hover {
+background: linear-gradient(135deg, #897bff, #6655e8);
+}
+
+.secondary-button {
+color: #e8edff;
+border-color: #34415e;
+background: #151d30;
+}
+
+.secondary-button:hover {
+border-color: #7164c9;
+background: #202943;
+}
+
+.text-link,
+.card-button,
+.roadmap-back-link,
+.clear-button {
+color: #b5acff;
+}
+
+.text-link:hover,
+.roadmap-back-link:hover {
+color: #d0caff;
+}
+
+/* Textos compartilhados */
+
+.eyebrow,
+.section-kicker {
+color: #b5acff;
+}
+
+.section-muted,
+.about-section-soft {
+background: #0e1525;
+}
+
+/* Página inicial */
+
+.hero {
+color: var(--ink);
+background:
+radial-gradient(circle at 78% 18%, rgba(117, 100, 255, 0.16), transparent 34%),
+radial-gradient(circle at 15% 80%, rgba(66, 214, 197, 0.06), transparent 30%),
+#0b1020;
+}
+
+.hero-grid-pattern {
+opacity: 0.6;
+background-image:
+linear-gradient(rgba(139, 124, 255, 0.06) 1px, transparent 1px),
+linear-gradient(90deg, rgba(139, 124, 255, 0.06) 1px, transparent 1px);
+}
+
+.hero-copy h1,
+.section-heading h2 {
+color: #f1f4ff;
+}
+
+.hero-copy h1 span,
+.about-hero h1 span,
+.about-intro-grid h2 span,
+.about-heading-centered h2 span,
+.about-purpose h2 span,
+.about-cta h2 span {
+color: #a69bff;
+}
+
+.hero-copy > p,
+.section-heading p {
+color: #a1aec5;
+}
+
+.hero-secondary {
+border-color: #34415e;
+color: #e8edff;
+background: rgba(21, 29, 48, 0.82);
+}
+
+.hero-stats strong {
+color: #f1f4ff;
+}
+
+.hero-stats span,
+.hero-terminal-line {
+color: #a1aec5;
+}
+
+.glow-one {
+background: rgba(117, 100, 255, 0.19);
+}
+
+.glow-two {
+background: rgba(66, 214, 197, 0.12);
+}
+
+.hero-grid-orbit {
+border-color: rgba(139, 124, 255, 0.3);
+}
+
+.floating-card {
+border-color: #34415e;
+background: rgba(21, 29, 48, 0.96);
+box-shadow: var(--shadow);
+}
+
+.floating-card b {
+color: #f1f4ff;
+}
+
+.floating-card small {
+color: #a1aec5;
+}
+
+.hero-center-badge {
+background: linear-gradient(145deg, #7564ff, #5544d7);
+box-shadow: 0 18px 45px rgba(117, 100, 255, 0.3);
+}
+
+/* Cartões de cursos, recursos e trilhas */
+
+.resource-card,
+.course-card,
+.track-card,
+.full-track-card,
+.roadmap-card {
+border-color: #293650;
+background: linear-gradient(155deg, #182238, #121a2c);
+box-shadow: var(--shadow-sm);
+}
+
+.resource-card:hover,
+.course-card:hover,
+.track-card:hover,
+.full-track-card:hover,
+.roadmap-card:hover {
+border-color: rgba(139, 124, 255, 0.65);
+box-shadow: 0 18px 38px rgba(0, 0, 0, 0.26);
+}
+
+.resource-card h3,
+.course-card h3,
+.track-card h3,
+.roadmap-card-content h2 {
+color: #edf2ff;
+}
+
+.resource-card p,
+.course-card p,
+.track-card p,
+.roadmap-card-content p {
+color: #a1aec5;
+}
+
+.resource-icon,
+.course-icon,
+.track-icon,
+.roadmap-card-icon,
+.about-feature-icon {
+color: #c4bcff;
+background: #292448;
+}
+
+.tag {
+color: #c0cbe0;
+background: #222d43;
+}
+
+.level {
+color: #c4bcff;
+background: #292448;
+}
+
+.certificate {
+color: #80e8bb;
+background: #14372f;
+}
+
+.mini-steps span {
+color: #b2bfd5;
+border-color: #293650;
+background: #111a2c;
+}
+
+.mini-steps b {
+color: #b5acff;
+}
+
+/* Faixa da comunidade */
+
+.community-banner,
+.about-section-dark {
+background:
+radial-gradient(circle at 85% 15%, rgba(117, 100, 255, 0.16), transparent 32%),
+#080d19;
+}
+
+.community-banner h2,
+.about-purpose h2 {
+color: #f1f4ff;
+}
+
+.community-banner p,
+.about-purpose p {
+color: #a1aec5;
+}
+
+/* Páginas, filtros e campos */
+
+.page-section {
+background: transparent;
+}
+
+.filters-panel {
+border-color: #293650;
+background: #151d30;
+box-shadow: var(--shadow-sm);
+}
+
+.search-box input,
+.course-filters select,
+input,
+select,
+textarea {
+color: #edf2ff;
+border-color: #34415e;
+background: #0f1728;
+}
+
+.search-box input::placeholder,
+input::placeholder,
+textarea::placeholder {
+color: #8492ac;
+opacity: 1;
+}
+
+.search-box input:focus,
+.course-filters select:focus,
+input:focus,
+select:focus,
+textarea:focus {
+border-color: #8b7cff;
+outline: none;
+box-shadow: 0 0 0 3px rgba(139, 124, 255, 0.16);
+}
+
+.course-filters select option {
+color: #edf2ff;
+background: #151d30;
+}
+
+.checkbox-control {
+color: #b2bfd5;
+}
+
+.empty-state {
+color: #a1aec5;
+border-color: #34415e;
+background: #121a2c;
+}
+
+.results-line {
+color: #a1aec5;
+}
+
+/* Lista de roadmaps */
+
+.roadmaps-page,
+.roadmap-detail-page {
+color: var(--ink);
+background:
+radial-gradient(circle at 92% 5%, rgba(117, 100, 255, 0.09), transparent 27%),
+#0b1020;
+}
+
+.roadmaps-hero h1,
+.roadmap-detail-hero h1,
+.roadmap-section-heading h2 {
+color: #f1f4ff;
+}
+
+.roadmaps-hero p,
+.roadmap-detail-hero p,
+.roadmap-section-heading p {
+color: #a1aec5;
+}
+
+.roadmap-card-icon {
+border: 1px solid rgba(139, 124, 255, 0.2);
+}
+
+.roadmap-card-link {
+color: #b5acff;
+}
+
+/* Mapa interativo */
+
+.roadmap-map-wrapper {
+border-color: #293650;
+background:
+radial-gradient(circle at 20% 20%, rgba(117, 100, 255, 0.12), transparent 30%),
+radial-gradient(circle at 80% 70%, rgba(66, 214, 197, 0.06), transparent 32%),
+#0d1424;
+box-shadow: 0 20px 55px rgba(0, 0, 0, 0.24);
+}
+
+.roadmap-map-viewport {
+background-color: #0d1424;
+background-image:
+linear-gradient(rgba(139, 124, 255, 0.055) 1px, transparent 1px),
+linear-gradient(90deg, rgba(139, 124, 255, 0.055) 1px, transparent 1px);
+}
+
+.roadmap-map-toolbar,
+.roadmap-map-legend {
+border-color: #34415e;
+background: rgba(17, 26, 44, 0.96);
+box-shadow: var(--shadow-sm);
+}
+
+.roadmap-map-toolbar-info {
+color: #a1aec5;
+}
+
+.roadmap-map-toolbar-info strong {
+color: #edf2ff;
+}
+
+.roadmap-map-toolbar-info span {
+border-color: #34415e;
+}
+
+.roadmap-map-controls button {
+color: #e8edff;
+border-color: #34415e;
+background: #182238;
+}
+
+.roadmap-map-controls button:hover {
+color: #d0caff;
+border-color: #8b7cff;
+background: #292448;
+}
+
+.roadmap-map-controls span {
+color: #a1aec5;
+}
+
+.roadmap-connection {
+stroke: #62708f;
+opacity: 0.9;
+}
+
+.roadmap-connection-prerequisite {
+stroke: #8294b7;
+}
+
+.roadmap-connection-next {
+stroke: #8b7cff;
+}
+
+.roadmap-connection-related {
+stroke: #b09cff;
+}
+
+.roadmap-connection-used_with {
+stroke: #42d6c5;
+}
+
+.roadmap-map-connections marker path {
+fill: #a69bff;
+}
+
+.roadmap-map-node {
+color: #edf2ff;
+border-color: var(--node-color);
+background: linear-gradient(145deg, #1b2740, #121b2e);
+box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+}
+
+.roadmap-map-node:hover {
+box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4);
+}
+
+.roadmap-map-node.selected {
+box-shadow:
+0 14px 32px rgba(0, 0, 0, 0.38),
+0 0 0 4px rgba(139, 124, 255, 0.2);
+}
+
+.roadmap-map-node strong {
+color: #f1f4ff;
+}
+
+.roadmap-map-node-level {
+color: #a1aec5;
+}
+
+.roadmap-map-legend-item {
+color: #b2bfd5;
+}
+
+.roadmap-node-panel {
+color: #edf2ff;
+border-color: #34415e;
+background: rgba(17, 26, 44, 0.98);
+box-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+}
+
+.roadmap-node-panel h2 {
+color: #f1f4ff;
+}
+
+.roadmap-node-panel > p {
+color: #a1aec5;
+}
+
+.roadmap-node-panel-meta span {
+color: #b2bfd5;
+background: #222d43;
+}
+
+.roadmap-node-panel-connections {
+border-color: #34415e;
+}
+
+.roadmap-node-panel-connection {
+border-color: #293650;
+}
+
+.roadmap-node-panel-connection span {
+color: #b5acff;
+}
+
+.roadmap-node-panel-close {
+color: #c0cbe0;
+border-color: #34415e;
+background: #182238;
+}
+
+.roadmap-node-panel-close:hover {
+color: #ff9aa0;
+background: #38202d;
+}
+
+/* Página Sobre */
+
+.about-hero {
+background:
+radial-gradient(circle at 75% 30%, rgba(117, 100, 255, 0.14), transparent 35%),
+#0b1020;
+}
+
+.about-hero h1,
+.about-intro-grid h2,
+.about-heading-centered h2,
+.about-cta h2 {
+color: #f1f4ff;
+}
+
+.about-hero-copy > p,
+.about-intro-text,
+.about-heading-centered p,
+.about-feature-card p,
+.about-cta p {
+color: #a1aec5;
+}
+
+.about-feature-card,
+.about-stats,
+.about-cta {
+border-color: #293650;
+background: #151d30;
+box-shadow: var(--shadow-sm);
+}
+
+.about-feature-card h3 {
+color: #edf2ff;
+}
+
+.about-feature-number,
+.about-feature-card a {
+color: #b5acff;
+}
+
+.about-stat {
+border-color: #293650;
+}
+
+.about-stat strong {
+color: #f1f4ff;
+}
+
+.about-stat span {
+color: #a1aec5;
+}
+
+.about-purpose-points {
+border-color: rgba(255, 255, 255, 0.12);
+}
+
+.about-purpose-points > div {
+border-color: rgba(255, 255, 255, 0.12);
+}
+
+.about-purpose-points span {
+color: #b5acff;
+}
+
+.about-cta {
+border-color: #293650;
+}
+
+/* Rodapé */
+
+.site-footer {
+border-top: 1px solid #202b41;
+background: #070b15;
+}
+
+.footer-brand strong,
+.site-footer h3 {
+color: #f1f4ff;
+}
+
+.footer-text,
+.site-footer a {
+color: #a1aec5;
+}
+
+.site-footer a:hover {
+color: #c4bcff;
+}
+
+/* Páginas de erro */
+
+.empty-page h1 {
+color: #f1f4ff;
+}
+
+.empty-page p {
+color: #a1aec5;
+}
+
+/* Transições respeitando acessibilidade */
+
+@media (prefers-reduced-motion: reduce) {
+*,
+*::before,
+*::after {
+scroll-behavior: auto !important;
+animation-duration: 0.01ms !important;
+animation-iteration-count: 1 !important;
+transition-duration: 0.01ms !important;
+}
+}
+
+/* Ajustes de telas pequenas */
+
+@media (max-width: 700px) {
+.roadmap-map-toolbar-info {
+row-gap: 8px;
+}
+
+.roadmap-map-legend {
+background: rgba(17, 26, 44, 0.98);
+}
+}
+
