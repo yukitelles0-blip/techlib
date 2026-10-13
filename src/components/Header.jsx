@@ -1,12 +1,19 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import {
+  BookOpen,
+  Compass,
+  FlaskConical,
+  GraduationCap,
+  Map,
+} from "lucide-react";
 
 const navItems = [
-  ["/biblioteca", "📚 Biblioteca"],
-  ["/cursos", "🎓 Cursos"],
-  ["/trilhas", "🗺️ Trilhas"],
-  ["/labs", "🧪 Labs"],
-  ["/roadmaps", "🧭 Roadmaps"],
+  ["/biblioteca", "Biblioteca", BookOpen],
+  ["/cursos", "Cursos", GraduationCap],
+  ["/trilhas", "Trilhas", Map],
+  ["/labs", "Labs", FlaskConical],
+  ["/roadmaps", "Roadmaps", Compass],
   ["/sobre", "Sobre"],
 ];
 
@@ -28,7 +35,7 @@ export default function Header() {
           className="main-nav"
           aria-label="Navegação principal"
         >
-          {navItems.map(([path, label]) => (
+          {navItems.map(([path, label, Icon]) => (
             <NavLink
               key={path}
               to={path}
@@ -38,6 +45,7 @@ export default function Header() {
                   : "nav-link"
               }
             >
+              {Icon && <Icon size={15} aria-hidden="true" />}
               {label}
             </NavLink>
           ))}
