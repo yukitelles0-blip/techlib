@@ -597,5 +597,107 @@ export const paths = [
       "sql",
     ],
   },
+  // =========================================================
+  // EXPANSÃO DOS ROADMAPS
+  // =========================================================
+
+  {
+      id: "databases-expansion-sql",
+      roadmapId: "databases",
+      name: "SQL na prática",
+      description: "Consultas, relacionamentos e agregações.",
+      level: "intermediate",
+      nodes: ["database-modeling", "sql", "database-relational-model", "database-primary-foreign-keys", "database-joins", "database-aggregations", "database-normalization"],
+    },
+
+  {
+      id: "databases-expansion-admin",
+      roadmapId: "databases",
+      name: "Administração e segurança",
+      description: "SGBDs, transações, acesso e recuperação.",
+      level: "intermediate",
+      nodes: ["sql", "nosql", "database-transactions", "database-postgresql", "database-mysql", "database-backups", "database-access-control"],
+    },
+
+  {
+      id: "networking-expansion-foundations",
+      roadmapId: "networking",
+      name: "Fundamentos de Rede",
+      description: "Camadas, endereçamento e tráfego local.",
+      level: "beginner",
+      nodes: ["networking", "tcp-ip", "network-osi-model", "ipv4-ipv6", "ethernet", "network-mac-address", "network-arp", "subnetting"],
+    },
+
+  {
+      id: "networking-expansion-operations",
+      roadmapId: "networking",
+      name: "Operação e diagnóstico",
+      description: "Ferramentas e serviços para investigar problemas de conectividade.",
+      level: "intermediate",
+      nodes: ["dns", "dhcp", "http", "icmp", "traceroute", "wireshark", "network-packet-capture", "network-dhcp-dns-troubleshooting", "network-routing-table"],
+    },
+
+  {
+      id: "networking-expansion-security",
+      roadmapId: "networking",
+      name: "Infraestrutura e segurança",
+      description: "Controles e conceitos para redes corporativas.",
+      level: "intermediate",
+      nodes: ["routing", "switching", "vlan", "nat", "vpn", "network-firewall", "network-proxy", "network-load-balancing", "network-qos"],
+    },
+
+  {
+      id: "linux-expansion-basics",
+      roadmapId: "linux",
+      name: "Linux essencial",
+      description: "Arquivos, contas, pacotes e acesso remoto.",
+      level: "beginner",
+      nodes: ["linux", "linux-terminal", "bash", "linux-filesystem", "linux-users-groups", "linux-package-management", "linux-ssh"],
+    },
+
+  {
+      id: "linux-expansion-admin",
+      roadmapId: "linux",
+      name: "Administração e monitoramento",
+      description: "Serviços, processos, logs e automação.",
+      level: "intermediate",
+      nodes: ["linux", "linux-processes", "linux-systemd-services", "linux-logs-journalctl", "linux-cron", "linux-network-tools", "linux-process-monitoring"],
+    },
+
+  {
+      id: "linux-expansion-security",
+      roadmapId: "linux",
+      name: "Segurança Linux",
+      description: "Práticas introdutórias para reduzir riscos no sistema.",
+      level: "intermediate",
+      nodes: ["linux", "linux-permissions", "linux-hardening", "linux-logs-journalctl", "linux-ssh"],
+    },
+
+  {
+      id: "cloud-expansion-foundations",
+      roadmapId: "cloud",
+      name: "Fundamentos de Cloud",
+      description: "Modelos de serviço e infraestrutura virtualizada.",
+      level: "beginner",
+      nodes: ["cloud", "cloud-iaas-paas-saas", "cloud-virtual-machines", "cloud-object-storage", "cloud-storage"],
+    },
+
+  {
+      id: "cloud-expansion-network-security",
+      roadmapId: "cloud",
+      name: "Redes e segurança em Cloud",
+      description: "Redes virtuais, regras de acesso e identidade.",
+      level: "intermediate",
+      nodes: ["cloud", "cloud-networking", "iam", "cloud-iam", "cloud-vpc", "cloud-security-groups", "cloud-shared-responsibility"],
+    },
+
+  {
+      id: "cloud-expansion-operations",
+      roadmapId: "cloud",
+      name: "Operação e resiliência",
+      description: "Monitoramento, custos, backup e containers.",
+      level: "intermediate",
+      nodes: ["cloud", "cloud-monitoring", "cloud-cost-management", "cloud-backup-recovery", "cloud-containers", "cloud-storage"],
+    },
 
 ];
