@@ -896,6 +896,806 @@ export const nodes = [
     tags: ["development", "software-engineering"],
   },
 
+  // =========================================================
+  // EXPANSAO: REDES DE COMPUTADORES
+  // =========================================================
+
+  {
+    id: "osi-model",
+    name: "Modelo OSI",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "networking",
+    tags: ["osi", "modelo-osi", "networking"],
+  },
+  {
+    id: "ethernet",
+    name: "Ethernet",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "networking",
+    tags: ["ethernet", "lan", "networking"],
+  },
+  {
+    id: "ipv4-ipv6",
+    name: "IPv4 e IPv6",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "networking",
+    tags: ["ipv4", "ipv6", "ip"],
+  },
+  {
+    id: "routing",
+    name: "Roteamento",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "networking",
+    tags: ["routing", "roteamento", "networking"],
+  },
+  {
+    id: "switching",
+    name: "Switching",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "networking",
+    tags: ["switching", "switch", "networking"],
+  },
+  {
+    id: "vlan",
+    name: "VLAN",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "networking",
+    tags: ["vlan", "segmentação", "networking"],
+  },
+  {
+    id: "nat",
+    name: "NAT",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "networking",
+    tags: ["nat", "endereçamento", "networking"],
+  },
+  {
+    id: "vpn",
+    name: "VPN",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "networking",
+    tags: ["vpn", "túnel", "networking"],
+  },
+  {
+    id: "wireless-networks",
+    name: "Redes sem Fio",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "networking",
+    tags: ["wifi", "wireless", "networking"],
+  },
+  {
+    id: "ports-protocols",
+    name: "Portas e Protocolos",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "networking",
+    tags: ["portas", "protocolos", "tcp", "udp"],
+  },
+  {
+    id: "icmp",
+    name: "ICMP e Ping",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "networking",
+    tags: ["icmp", "ping", "diagnóstico"],
+  },
+  {
+    id: "traceroute",
+    name: "Traceroute",
+    type: NODE_TYPES.TOOL,
+    level: NODE_LEVELS.BEGINNER,
+    area: "networking",
+    tags: ["traceroute", "rota", "diagnóstico"],
+  },
+  {
+    id: "wireshark",
+    name: "Wireshark",
+    type: NODE_TYPES.TOOL,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "networking",
+    tags: ["wireshark", "pacotes", "análise-de-rede"],
+  },
+  {
+    id: "network-troubleshooting",
+    name: "Diagnóstico de Redes",
+    type: NODE_TYPES.SPECIALIZATION,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "networking",
+    tags: ["troubleshooting", "diagnóstico", "networking"],
+  },
+  {
+    id: "routing-protocols",
+    name: "Protocolos de Roteamento",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.ADVANCED,
+    area: "networking",
+    tags: ["routing", "ospf", "bgp"],
+  },
+
+  // =========================================================
+  // EXPANSAO: PROGRAMACAO
+  // =========================================================
+
+  {
+    id: "python-data-types",
+    name: "Tipos de Dados em Python",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "programming",
+    tags: ["python", "tipos-de-dados", "programação"],
+  },
+  {
+    id: "python-control-flow",
+    name: "Condicionais e Laços em Python",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "programming",
+    tags: ["python", "condicionais", "loops"],
+  },
+  {
+    id: "python-functions",
+    name: "Funções em Python",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "programming",
+    tags: ["python", "funções", "programação"],
+  },
+  {
+    id: "python-files",
+    name: "Manipulação de Arquivos com Python",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "programming",
+    tags: ["python", "arquivos", "automação"],
+  },
+  {
+    id: "python-requests",
+    name: "Requisições HTTP com Python",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "programming",
+    tags: ["python", "http", "apis"],
+  },
+  {
+    id: "python-testing",
+    name: "Testes Automatizados com Python",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "programming",
+    tags: ["python", "pytest", "testes"],
+  },
+  {
+    id: "regex",
+    name: "Expressões Regulares",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "programming",
+    tags: ["regex", "texto", "validação"],
+  },
+  {
+    id: "git-branching",
+    name: "Branches e Merge no Git",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "programming",
+    tags: ["git", "branches", "versionamento"],
+  },
+  {
+    id: "debugging",
+    name: "Depuração de Código",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "programming",
+    tags: ["debugging", "depuração", "programação"],
+  },
+
+  // =========================================================
+  // EXPANSAO: LINUX E SISTEMAS
+  // =========================================================
+
+  {
+    id: "linux-filesystem",
+    name: "Sistema de Arquivos Linux",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "linux",
+    tags: ["linux", "filesystem", "arquivos"],
+  },
+  {
+    id: "linux-permissions",
+    name: "Permissões no Linux",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "linux",
+    tags: ["linux", "permissões", "chmod"],
+  },
+  {
+    id: "linux-processes",
+    name: "Processos e Serviços Linux",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "linux",
+    tags: ["linux", "processos", "serviços"],
+  },
+  {
+    id: "bash-scripting",
+    name: "Scripts Bash",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "linux",
+    tags: ["bash", "shell-script", "automação"],
+  },
+  {
+    id: "windows-basics",
+    name: "Fundamentos do Windows",
+    type: NODE_TYPES.PLATFORM,
+    level: NODE_LEVELS.BEGINNER,
+    area: "systems",
+    tags: ["windows", "sistemas-operacionais", "fundamentos"],
+  },
+  {
+    id: "virtualization",
+    name: "Virtualização",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "systems",
+    tags: ["virtualização", "máquinas-virtuais", "infraestrutura"],
+  },
+
+  // =========================================================
+  // EXPANSAO: CLOUD E DEVOPS
+  // =========================================================
+
+  {
+    id: "cloud-fundamentals",
+    name: "Fundamentos de Cloud",
+    type: NODE_TYPES.FOUNDATION,
+    level: NODE_LEVELS.BEGINNER,
+    area: "cloud",
+    tags: ["cloud", "infraestrutura", "nuvem"],
+  },
+  {
+    id: "cloud-storage",
+    name: "Armazenamento em Nuvem",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "cloud",
+    tags: ["cloud", "storage", "armazenamento"],
+  },
+  {
+    id: "cloud-iam",
+    name: "Identidade e Acesso na Nuvem",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "cloud",
+    tags: ["cloud", "iam", "identidade", "acesso"],
+  },
+  {
+    id: "containers",
+    name: "Containers",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "devops",
+    tags: ["containers", "docker", "devops"],
+  },
+  {
+    id: "infrastructure-as-code",
+    name: "Infraestrutura como Código",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.ADVANCED,
+    area: "devops",
+    tags: ["iac", "automação", "infraestrutura"],
+  },
+  {
+    id: "observability",
+    name: "Observabilidade",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "devops",
+    tags: ["observabilidade", "logs", "métricas", "traces"],
+  },
+
+  // =========================================================
+  // EXPANSAO: DADOS E BANCO DE DADOS
+  // =========================================================
+
+  {
+    id: "relational-databases",
+    name: "Bancos de Dados Relacionais",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "databases",
+    tags: ["sql", "relacional", "banco-de-dados"],
+  },
+  {
+    id: "database-modeling",
+    name: "Modelagem de Dados",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "databases",
+    tags: ["modelagem", "entidades", "relacionamentos"],
+  },
+  {
+    id: "database-indexes",
+    name: "Índices e Consultas SQL",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "databases",
+    tags: ["sql", "índices", "consultas"],
+  },
+  {
+    id: "data-visualization",
+    name: "Visualização de Dados",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "data",
+    tags: ["dados", "visualização", "dashboards"],
+  },
+
+  // =========================================================
+  // EXPANSAO: DESENVOLVIMENTO WEB
+  // =========================================================
+
+  {
+    id: "responsive-design",
+    name: "Design Responsivo",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "development",
+    tags: ["web", "css", "responsivo"],
+  },
+  {
+    id: "web-forms",
+    name: "Formulários Web",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "development",
+    tags: ["html", "forms", "web"],
+  },
+  {
+    id: "state-management",
+    name: "Gerenciamento de Estado no Front-end",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["frontend", "react", "state"],
+  },
+  {
+    id: "web-performance",
+    name: "Desempenho Web",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["web", "performance", "frontend"],
+  },
+  {
+    id: "deployment",
+    name: "Publicação de Aplicações",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["deployment", "deploy", "web"],
+  },
+
+
+  // =========================================================
+  // EXPANSÃO REVISADA: NOVOS TÓPICOS POR ÁREA
+  // =========================================================
+
+  {
+    id: "security-operations-center",
+    name: "Centro de Operações de Segurança (SOC)",
+    type: NODE_TYPES.SPECIALIZATION,
+    level: NODE_LEVELS.BEGINNER,
+    area: "cybersecurity",
+    tags: ["soc", "blue-team", "monitoramento", "segurança"],
+  },
+
+  {
+    id: "edr",
+    name: "EDR",
+    type: NODE_TYPES.TOOL,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "cybersecurity",
+    tags: ["edr", "endpoint", "detecção", "blue-team"],
+  },
+
+  {
+    id: "threat-hunting",
+    name: "Threat Hunting",
+    type: NODE_TYPES.SPECIALIZATION,
+    level: NODE_LEVELS.ADVANCED,
+    area: "cybersecurity",
+    tags: ["threat-hunting", "blue-team", "detecção"],
+  },
+
+  {
+    id: "phishing-analysis",
+    name: "Análise de Phishing",
+    type: NODE_TYPES.SPECIALIZATION,
+    level: NODE_LEVELS.BEGINNER,
+    area: "cybersecurity",
+    tags: ["phishing", "engenharia-social", "análise"],
+  },
+
+  {
+    id: "malware-analysis",
+    name: "Análise de Malware",
+    type: NODE_TYPES.SPECIALIZATION,
+    level: NODE_LEVELS.ADVANCED,
+    area: "cybersecurity",
+    tags: ["malware", "análise", "segurança"],
+  },
+
+  {
+    id: "identity-access-management",
+    name: "Gestão de Identidade e Acesso",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "cybersecurity",
+    tags: ["iam", "identidade", "controle-de-acesso"],
+  },
+
+  {
+    id: "security-hardening",
+    name: "Hardening de Sistemas",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "cybersecurity",
+    tags: ["hardening", "configuração-segura", "sistemas"],
+  },
+
+  {
+    id: "security-awareness",
+    name: "Conscientização em Segurança",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "cybersecurity",
+    tags: ["conscientização", "phishing", "segurança"],
+  },
+
+  {
+    id: "firewalls",
+    name: "Firewalls",
+    type: NODE_TYPES.TOOL,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "networking",
+    tags: ["firewall", "filtragem", "segurança-de-redes"],
+  },
+
+  {
+    id: "udp",
+    name: "UDP",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "networking",
+    tags: ["udp", "protocolos", "redes"],
+  },
+
+  {
+    id: "http-https",
+    name: "HTTP e HTTPS",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "networking",
+    tags: ["http", "https", "tls", "web"],
+  },
+
+  {
+    id: "tls-certificates",
+    name: "TLS e Certificados Digitais",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "networking",
+    tags: ["tls", "certificados", "criptografia"],
+  },
+
+  {
+    id: "load-balancing",
+    name: "Balanceamento de Carga",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.ADVANCED,
+    area: "networking",
+    tags: ["load-balancing", "infraestrutura", "redes"],
+  },
+
+  {
+    id: "network-segmentation",
+    name: "Segmentação de Redes",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "networking",
+    tags: ["segmentação", "vlan", "segurança-de-redes"],
+  },
+
+  {
+    id: "network-access-control",
+    name: "Controle de Acesso à Rede",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.ADVANCED,
+    area: "networking",
+    tags: ["nac", "controle-de-acesso", "redes"],
+  },
+
+  {
+    id: "python-collections",
+    name: "Listas, Tuplas e Dicionários em Python",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "programming",
+    tags: ["python", "listas", "dicionários", "estruturas-de-dados"],
+  },
+
+  {
+    id: "python-exceptions",
+    name: "Tratamento de Exceções em Python",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "programming",
+    tags: ["python", "exceções", "erros"],
+  },
+
+  {
+    id: "python-virtual-environments",
+    name: "Ambientes Virtuais Python",
+    type: NODE_TYPES.TOOL,
+    level: NODE_LEVELS.BEGINNER,
+    area: "programming",
+    tags: ["python", "venv", "dependências"],
+  },
+
+  {
+    id: "python-logging",
+    name: "Logging em Python",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "programming",
+    tags: ["python", "logging", "logs"],
+  },
+
+  {
+    id: "python-cli",
+    name: "Aplicações de Linha de Comando",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "programming",
+    tags: ["python", "cli", "terminal"],
+  },
+
+  {
+    id: "git-github-workflow",
+    name: "Fluxo de Trabalho com GitHub",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "programming",
+    tags: ["git", "github", "commits", "pull-request"],
+  },
+
+  {
+    id: "linux-users-groups",
+    name: "Usuários e Grupos no Linux",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "linux",
+    tags: ["linux", "usuários", "grupos", "permissões"],
+  },
+
+  {
+    id: "linux-networking",
+    name: "Comandos de Rede no Linux",
+    type: NODE_TYPES.TOOL,
+    level: NODE_LEVELS.BEGINNER,
+    area: "linux",
+    tags: ["linux", "rede", "ip", "ping"],
+  },
+
+  {
+    id: "systemd",
+    name: "Serviços com systemd",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "linux",
+    tags: ["linux", "systemd", "serviços"],
+  },
+
+  {
+    id: "windows-powershell",
+    name: "PowerShell",
+    type: NODE_TYPES.TOOL,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "systems",
+    tags: ["windows", "powershell", "automação"],
+  },
+
+  {
+    id: "windows-event-logs",
+    name: "Logs de Eventos do Windows",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "systems",
+    tags: ["windows", "event-viewer", "logs", "blue-team"],
+  },
+
+  {
+    id: "backup-recovery",
+    name: "Backup e Recuperação",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "systems",
+    tags: ["backup", "recuperação", "continuidade"],
+  },
+
+  {
+    id: "cloud-security",
+    name: "Segurança em Nuvem",
+    type: NODE_TYPES.SPECIALIZATION,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "cloud",
+    tags: ["cloud", "segurança", "iam"],
+  },
+
+  {
+    id: "cloud-compute",
+    name: "Computação e Máquinas Virtuais na Nuvem",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "cloud",
+    tags: ["cloud", "compute", "máquinas-virtuais"],
+  },
+
+  {
+    id: "cloud-monitoring",
+    name: "Monitoramento em Nuvem",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "cloud",
+    tags: ["cloud", "monitoramento", "observabilidade"],
+  },
+
+  {
+    id: "kubernetes",
+    name: "Kubernetes",
+    type: NODE_TYPES.TOOL,
+    level: NODE_LEVELS.ADVANCED,
+    area: "devops",
+    tags: ["kubernetes", "containers", "orquestração"],
+  },
+
+  {
+    id: "secrets-management",
+    name: "Gerenciamento de Segredos",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "devops",
+    tags: ["secrets", "credenciais", "devsecops"],
+  },
+
+  {
+    id: "database-security",
+    name: "Segurança de Banco de Dados",
+    type: NODE_TYPES.SPECIALIZATION,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "databases",
+    tags: ["database", "sql", "segurança", "controle-de-acesso"],
+  },
+
+  {
+    id: "sql-joins",
+    name: "JOINs em SQL",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "databases",
+    tags: ["sql", "joins", "consultas"],
+  },
+
+  {
+    id: "database-backup",
+    name: "Backup de Banco de Dados",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "databases",
+    tags: ["database", "backup", "recuperação"],
+  },
+
+  {
+    id: "data-cleaning",
+    name: "Limpeza e Preparação de Dados",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "data",
+    tags: ["dados", "data-cleaning", "qualidade"],
+  },
+
+  {
+    id: "data-pipelines",
+    name: "Pipelines de Dados",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "data",
+    tags: ["dados", "pipelines", "engenharia-de-dados"],
+  },
+
+  {
+    id: "bi-dashboards",
+    name: "Business Intelligence e Dashboards",
+    type: NODE_TYPES.SPECIALIZATION,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "data",
+    tags: ["bi", "dashboards", "visualização"],
+  },
+
+  {
+    id: "web-security-headers",
+    name: "Cabeçalhos de Segurança HTTP",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["web-security", "http", "headers", "appsec"],
+  },
+
+  {
+    id: "authentication-web",
+    name: "Autenticação em Aplicações Web",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["web", "autenticação", "sessões", "segurança"],
+  },
+
+  {
+    id: "web-deployment-ci",
+    name: "Deploy e Integração Contínua",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "development",
+    tags: ["deploy", "ci-cd", "web"],
+  },
+
+  {
+    id: "web-seo-basics",
+    name: "Fundamentos de SEO Técnico",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "development",
+    tags: ["web", "seo", "performance"],
+  },
+
+  {
+    id: "privacy-data-protection",
+    name: "Privacidade e Proteção de Dados",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.BEGINNER,
+    area: "cybersecurity",
+    tags: ["privacidade", "lgpd", "proteção-de-dados"],
+  },
+
+  {
+    id: "risk-assessment",
+    name: "Avaliação de Riscos",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "cybersecurity",
+    tags: ["riscos", "avaliação", "governança"],
+  },
+
+  {
+    id: "security-policies",
+    name: "Políticas de Segurança",
+    type: NODE_TYPES.CONCEPT,
+    level: NODE_LEVELS.INTERMEDIATE,
+    area: "cybersecurity",
+    tags: ["políticas", "governança", "compliance"],
+  },
+
 ];
 
 console.log("TechLib nodes carregados:", nodes.length);
