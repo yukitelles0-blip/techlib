@@ -1125,4 +1125,435 @@ export const connections = [
     type: "NEXT",
   },
 
+
+  // =========================================================
+  // CONEXÕES ADICIONAIS — TRILHAS INTEGRADAS
+  // =========================================================
+  {
+    roadmapId: "databases",
+    from: "databases",
+    to: "relational-databases",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "relational-databases",
+    to: "database-modeling",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "database-primary-foreign-keys",
+    to: "sql",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "sql",
+    to: "database-joins",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "database-aggregations",
+    to: "database-normalization",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "database-normalization",
+    to: "database-transactions",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "database-transactions",
+    to: "database-indexes",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "database-indexes",
+    to: "database-postgresql",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "database-postgresql",
+    to: "database-mysql",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "database-mysql",
+    to: "nosql",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "nosql",
+    to: "database-access-control",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "database-access-control",
+    to: "database-backups",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "networking",
+    to: "osi-model",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "osi-model",
+    to: "network-osi-model",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "network-osi-model",
+    to: "ethernet",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "network-mac-address",
+    to: "tcp-ip",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "subnetting",
+    to: "ports-protocols",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "ports-protocols",
+    to: "network-arp",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "network-arp",
+    to: "icmp",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "icmp",
+    to: "dns",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "dns",
+    to: "dhcp",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "dhcp",
+    to: "http",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "http",
+    to: "switching",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "switching",
+    to: "vlan",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "vlan",
+    to: "routing",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "network-routing-table",
+    to: "routing-protocols",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "routing-protocols",
+    to: "nat",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "nat",
+    to: "wireless-networks",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "wireless-networks",
+    to: "network-firewall",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "network-firewall",
+    to: "vpn",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "vpn",
+    to: "network-proxy",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "network-proxy",
+    to: "network-qos",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "network-qos",
+    to: "network-load-balancing",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "network-load-balancing",
+    to: "network-dhcp-dns-troubleshooting",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "network-dhcp-dns-troubleshooting",
+    to: "traceroute",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "traceroute",
+    to: "network-troubleshooting",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "network-troubleshooting",
+    to: "wireshark",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "wireshark",
+    to: "network-packet-capture",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "linux-terminal",
+    to: "linux-filesystem",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "linux-filesystem",
+    to: "linux-permissions",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "linux-permissions",
+    to: "linux-users-groups",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "linux-package-management",
+    to: "linux-processes",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "linux-logs-journalctl",
+    to: "linux-ssh",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "linux-ssh",
+    to: "linux-network-tools",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "linux-network-tools",
+    to: "linux-cron",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "linux-cron",
+    to: "bash",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "bash",
+    to: "bash-scripting",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "bash-scripting",
+    to: "linux-process-monitoring",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "linux-process-monitoring",
+    to: "linux-hardening",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud",
+    to: "cloud-fundamentals",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-fundamentals",
+    to: "cloud-iaas-paas-saas",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-iaas-paas-saas",
+    to: "cloud-shared-responsibility",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-shared-responsibility",
+    to: "cloud-cost-management",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-cost-management",
+    to: "cloud-virtual-machines",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-virtual-machines",
+    to: "cloud-storage",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-storage",
+    to: "cloud-object-storage",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-backup-recovery",
+    to: "cloud-networking",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-security-groups",
+    to: "iam",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "iam",
+    to: "cloud-iam",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-iam",
+    to: "cloud-containers",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-containers",
+    to: "cloud-monitoring",
+    type: "NEXT",
+  },
+
 ];
