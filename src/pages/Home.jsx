@@ -1,9 +1,11 @@
-```jsx
+
 import React from "react";
 import { Link } from "react-router-dom";
+
 import SectionTitle from "../components/SectionTitle";
 import ResourceCard from "../components/ResourceCard";
 import CourseCard from "../components/CourseCard";
+
 import { resources } from "../data/resources";
 import { courses } from "../data/courses";
 import { tracks } from "../data/tracks";
@@ -16,10 +18,12 @@ export default function Home() {
 
   return (
     <>
+      {/* HERO */}
       <section className="hero">
-        <div className="hero-grid-pattern"></div>
+        <div className="hero-grid-pattern" aria-hidden="true" />
 
         <div className="container hero-grid">
+          {/* Conteúdo principal */}
           <div className="hero-copy">
             <span className="eyebrow">
               CONHECIMENTO TECH ORGANIZADO
@@ -31,8 +35,9 @@ export default function Home() {
             </h1>
 
             <p>
-              Uma biblioteca virtual para descobrir materiais, cursos gratuitos,
-              trilhas de aprendizagem e laboratórios práticos em tecnologia.
+              Uma biblioteca virtual para descobrir materiais, cursos
+              gratuitos, trilhas de aprendizagem e laboratórios
+              práticos em tecnologia.
             </p>
 
             <div className="hero-actions">
@@ -40,11 +45,15 @@ export default function Home() {
                 Explorar biblioteca <span>→</span>
               </Link>
 
-              <Link className="secondary-button hero-secondary" to="/trilhas">
+              <Link
+                className="secondary-button hero-secondary"
+                to="/trilhas"
+              >
                 Ver trilhas
               </Link>
             </div>
 
+            {/* Estatísticas */}
             <div className="hero-stats">
               <div>
                 <strong>{resources.length}+</strong>
@@ -73,18 +82,20 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Ilustração tecnológica */}
           <div className="hero-visual" aria-hidden="true">
-            <div className="hero-glow glow-one"></div>
-            <div className="hero-glow glow-two"></div>
+            <div className="hero-glow glow-one" />
+            <div className="hero-glow glow-two" />
 
-            <div className="hero-grid-orbit"></div>
+            <div className="hero-grid-orbit" />
 
+            {/* Janela de código */}
             <div className="hero-code-window">
               <div className="code-window-header">
                 <div className="window-dots">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                  <span />
+                  <span />
+                  <span />
                 </div>
 
                 <span>techlib.py</span>
@@ -92,7 +103,7 @@ export default function Home() {
 
               <div className="code-content">
                 <div>
-                  <span className="code-number">01</span>
+                  <span className="code-number">01</span>{" "}
                   <span className="code-purple">const</span>{" "}
                   <span className="code-blue">techlib</span> = {"{"}
                 </div>
@@ -116,17 +127,17 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <span className="code-number">05</span>
-                  {"}"}
+                  <span className="code-number">05</span> {"}"}
                 </div>
 
                 <div className="code-cursor">
-                  <span className="code-number">06</span>
+                  <span className="code-number">06</span>{" "}
                   <span>▌</span>
                 </div>
               </div>
             </div>
 
+            {/* Cards flutuantes */}
             <div className="floating-card card-a">
               <span>🛡️</span>
               <div>
@@ -151,6 +162,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Terminal ilustrativo */}
             <div className="hero-mini-terminal">
               <span>$ techlib</span>
               <strong>› estudar</strong>
@@ -158,7 +170,7 @@ export default function Home() {
               <strong>› evoluir</strong>
             </div>
 
-            {/* Emblema central reduzido */}
+            {/* Emblema central simplificado */}
             <div className="hero-center-badge">
               <span>⌘</span>
               <strong>TechLib</strong>
@@ -167,6 +179,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* RECURSOS EM DESTAQUE */}
       <section className="section container">
         <SectionTitle
           eyebrow="EXPLORE"
@@ -189,6 +202,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CURSOS GRATUITOS */}
       <section className="section section-muted">
         <div className="container">
           <SectionTitle
@@ -213,6 +227,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TRILHAS DE APRENDIZAGEM */}
       <section className="section container">
         <SectionTitle
           eyebrow="POR ONDE COMEÇAR?"
@@ -253,18 +268,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* COMUNIDADE */}
       <section className="community-banner">
         <div className="container community-inner">
           <div>
-            <span className="eyebrow">FEITO PARA A COMUNIDADE</span>
+            <span className="eyebrow">
+              FEITO PARA A COMUNIDADE
+            </span>
 
             <h2>
               Conhecimento fica melhor quando é compartilhado.
             </h2>
 
             <p>
-              O TechLib pode crescer junto com a comunidade, recebendo novas
-              indicações e trilhas.
+              O TechLib pode crescer junto com a comunidade, recebendo
+              novas indicações e trilhas.
             </p>
           </div>
 
