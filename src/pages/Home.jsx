@@ -1,3 +1,4 @@
+```jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import SectionTitle from "../components/SectionTitle";
@@ -20,7 +21,9 @@ export default function Home() {
 
         <div className="container hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow">CONHECIMENTO TECH ORGANIZADO</span>
+            <span className="eyebrow">
+              CONHECIMENTO TECH ORGANIZADO
+            </span>
 
             <h1>
               Aprenda tecnologia.
@@ -155,10 +158,10 @@ export default function Home() {
               <strong>› evoluir</strong>
             </div>
 
+            {/* Emblema central reduzido */}
             <div className="hero-center-badge">
               <span>⌘</span>
-              <strong>TECHLIB</strong>
-              <small>LEARN • PRACTICE • EVOLVE</small>
+              <strong>TechLib</strong>
             </div>
           </div>
         </div>
@@ -273,3 +276,4 @@ export default function Home() {
     </>
   );
 }
+```
