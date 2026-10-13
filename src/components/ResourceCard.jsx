@@ -1,4 +1,5 @@
 import React from "react";
+import { ArrowUpRight, Check } from "lucide-react";
 
 export default function ResourceCard({ resource }) {
   return (
@@ -15,7 +16,11 @@ export default function ResourceCard({ resource }) {
 
       <div className="card-meta">
         <span>{resource.type}</span>
-        {resource.free && <span>✓ Gratuito</span>}
+        {resource.free && (
+          <span className="card-free">
+            <Check size={13} aria-hidden="true" /> Gratuito
+          </span>
+        )}
       </div>
 
       <a
@@ -24,7 +29,7 @@ export default function ResourceCard({ resource }) {
         target="_blank"
         rel="noreferrer"
       >
-        Acessar recurso <span>↗</span>
+        Acessar recurso <ArrowUpRight size={14} aria-hidden="true" />
       </a>
     </article>
   );
