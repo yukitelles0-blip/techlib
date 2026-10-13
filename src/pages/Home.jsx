@@ -1,5 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  Braces,
+  Command,
+  Network,
+  ShieldCheck,
+} from "lucide-react";
 
 import SectionTitle from "../components/SectionTitle";
 import ResourceCard from "../components/ResourceCard";
@@ -41,7 +48,7 @@ export default function Home() {
 
             <div className="hero-actions">
               <Link className="primary-button" to="/biblioteca">
-                Explorar biblioteca <span>→</span>
+                Explorar biblioteca <ArrowRight size={16} aria-hidden="true" />
               </Link>
 
               <Link
@@ -138,7 +145,7 @@ export default function Home() {
 
             {/* Cards flutuantes */}
             <div className="floating-card card-a">
-              <span>🛡️</span>
+              <span><ShieldCheck size={18} /></span>
               <div>
                 <b>Cybersecurity</b>
                 <small>Proteja sistemas</small>
@@ -146,7 +153,7 @@ export default function Home() {
             </div>
 
             <div className="floating-card card-b">
-              <span>🐍</span>
+              <span><Braces size={18} /></span>
               <div>
                 <b>Python</b>
                 <small>Automatize tarefas</small>
@@ -154,7 +161,7 @@ export default function Home() {
             </div>
 
             <div className="floating-card card-c">
-              <span>🌐</span>
+              <span><Network size={18} /></span>
               <div>
                 <b>Redes</b>
                 <small>Conecte ideias</small>
@@ -171,7 +178,7 @@ export default function Home() {
 
             {/* Emblema central simplificado */}
             <div className="hero-center-badge">
-              <span>⌘</span>
+              <span><Command size={22} /></span>
               <strong>TechLib</strong>
             </div>
           </div>
@@ -260,7 +267,7 @@ export default function Home() {
               </div>
 
               <Link to="/trilhas" className="card-button">
-                Ver trilha <span>→</span>
+                Ver trilha <ArrowRight size={14} aria-hidden="true" />
               </Link>
             </article>
           ))}
