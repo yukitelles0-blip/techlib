@@ -798,5 +798,331 @@ export const connections = [
     to: "sql",
     type: "USED_WITH",
   },
+  // =========================================================
+  // EXPANSÃO DOS ROADMAPS
+  // =========================================================
+
+  {
+    roadmapId: "databases",
+    from: "database-modeling",
+    to: "database-relational-model",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "database-relational-model",
+    to: "database-primary-foreign-keys",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "database-primary-foreign-keys",
+    to: "database-joins",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "database-joins",
+    to: "database-aggregations",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "database-relational-model",
+    to: "database-normalization",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "database-joins",
+    to: "database-transactions",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "database-joins",
+    to: "database-postgresql",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "database-joins",
+    to: "database-mysql",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "database-transactions",
+    to: "database-backups",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "databases",
+    from: "database-transactions",
+    to: "database-access-control",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "networking",
+    to: "network-osi-model",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "network-osi-model",
+    to: "tcp-ip",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "tcp-ip",
+    to: "ipv4-ipv6",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "ipv4-ipv6",
+    to: "subnetting",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "ethernet",
+    to: "network-mac-address",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "network-mac-address",
+    to: "network-arp",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "dns",
+    to: "network-dhcp-dns-troubleshooting",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "dhcp",
+    to: "network-dhcp-dns-troubleshooting",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "icmp",
+    to: "traceroute",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "traceroute",
+    to: "network-packet-capture",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "routing",
+    to: "network-routing-table",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "vlan",
+    to: "network-firewall",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "vpn",
+    to: "network-firewall",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "network-firewall",
+    to: "network-proxy",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "networking",
+    from: "network-load-balancing",
+    to: "network-qos",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "linux",
+    to: "linux-filesystem",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "linux-filesystem",
+    to: "linux-users-groups",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "linux-users-groups",
+    to: "linux-package-management",
+    type: "NEXT",
+  },
+
+
+  {
+    roadmapId: "linux",
+    from: "bash",
+    to: "linux-ssh",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "linux-processes",
+    to: "linux-systemd-services",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "linux-systemd-services",
+    to: "linux-logs-journalctl",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "linux-logs-journalctl",
+    to: "linux-process-monitoring",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "bash",
+    to: "linux-cron",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "linux-terminal",
+    to: "linux-network-tools",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "linux",
+    from: "linux-permissions",
+    to: "linux-hardening",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud",
+    to: "cloud-iaas-paas-saas",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-iaas-paas-saas",
+    to: "cloud-virtual-machines",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-iaas-paas-saas",
+    to: "cloud-object-storage",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-networking",
+    to: "cloud-vpc",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "iam",
+    to: "cloud-security-groups",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-vpc",
+    to: "cloud-security-groups",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-security-groups",
+    to: "cloud-shared-responsibility",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-virtual-machines",
+    to: "cloud-monitoring",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-object-storage",
+    to: "cloud-backup-recovery",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-monitoring",
+    to: "cloud-cost-management",
+    type: "NEXT",
+  },
+
+  {
+    roadmapId: "cloud",
+    from: "cloud-virtual-machines",
+    to: "cloud-containers",
+    type: "NEXT",
+  },
 
 ];
