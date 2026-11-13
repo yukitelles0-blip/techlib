@@ -1813,7 +1813,7 @@ textarea:focus,
 }
 
 /* =========================================================
-   FOOTER
+   FOOTER — TECHLIB
    ========================================================= */
 
 .site-footer {
@@ -1824,10 +1824,27 @@ textarea:focus,
   background: #070b15;
 }
 
+/* Organização das quatro colunas */
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+/* Identidade */
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  margin: 0;
 }
 
 .footer-brand strong {
@@ -1835,29 +1852,63 @@ textarea:focus,
   font-size: 18px;
 }
 
+.footer-brand small {
+  color: var(--muted);
+}
+
+/* Descrição */
 .footer-text {
   max-width: 390px;
-  margin-top: 12px;
+  margin: 12px 0 0;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.7;
 }
 
+/* Títulos */
 .site-footer h3 {
   margin: 0 0 14px;
   color: var(--ink-strong);
   font-size: 13px;
+  font-weight: 700;
 }
 
-.site-footer a {
-  display: block;
-  margin: 8px 0;
+/* Links de navegação */
+.site-footer .footer-column > a:not(.brand) {
+  display: inline-block;
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.site-footer .footer-column > a:not(.brand):hover {
+  color: var(--primary-light);
+}
+
+/* Textos das colunas */
+.footer-column p {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Copyright */
+.footer-column .footer-copy {
+  margin-top: 4px;
   color: var(--muted);
   font-size: 13px;
 }
 
-.site-footer a:hover {
-  color: #c4bcff;
+/* Contato */
+.footer-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px !important;
+  color: var(--primary-dark) !important;
+  font-weight: 600;
 }
 
 /* =========================================================
@@ -2340,4 +2391,3 @@ textarea:focus,
     white-space: normal;
   }
 }
-
