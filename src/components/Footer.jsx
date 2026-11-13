@@ -7,10 +7,11 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container footer-grid">
 
-        {/* Identidade do projeto */}
-        <div>
+        {/* Identidade do TechLib */}
+        <div className="footer-about">
           <Link className="brand footer-brand" to="/">
             <span className="brand-mark">T</span>
+
             <span>
               <strong>TechLib</strong>
               <small>Biblioteca Tech</small>
@@ -24,8 +25,9 @@ export default function Footer() {
         </div>
 
         {/* Navegação */}
-        <div>
+        <div className="footer-navigation">
           <h3>Navegação</h3>
+
           <Link to="/biblioteca">Biblioteca</Link>
           <Link to="/cursos">Cursos gratuitos</Link>
           <Link to="/trilhas">Trilhas</Link>
@@ -35,25 +37,31 @@ export default function Footer() {
         </div>
 
         {/* Informações do projeto */}
-        <div>
+        <div className="footer-project">
           <h3>Projeto</h3>
+
           <p>
             V1 — catálogo comunitário de recursos educacionais.
           </p>
+
           <p className="footer-copy">
-            © 2026 TechLib
+            © {new Date().getFullYear()} TechLib
           </p>
         </div>
 
         {/* Contato */}
-        <div>
+        <div className="footer-contact">
           <h3>Contato</h3>
+
           <p>
-            Tem alguma dúvida, sugestão ou interesse em parceria?
+            Tem alguma dúvida, sugestão ou interesse
+            em parceria?
           </p>
-          <p className="footer-contact">
+
+          <span className="footer-contact-status">
+            <span className="footer-contact-dot"></span>
             E-mail de contato em breve.
-          </p>
+          </span>
         </div>
 
       </div>
