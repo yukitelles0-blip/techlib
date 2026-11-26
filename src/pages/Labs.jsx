@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import SectionTitle from "../components/SectionTitle";
 import LabCard from "../components/LabCard";
@@ -15,7 +16,7 @@ export default function Labs() {
     };
 
     window.addEventListener(
-      "techlib-progress-updated",
+      "byteatlas-progress-updated",
       updateProgress
     );
 
@@ -23,7 +24,7 @@ export default function Labs() {
 
     return () => {
       window.removeEventListener(
-        "techlib-progress-updated",
+        "byteatlas-progress-updated",
         updateProgress
       );
 
@@ -37,9 +38,9 @@ export default function Labs() {
   return (
     <section className="section container page-section">
       <SectionTitle
-        eyebrow="LABS PRÁTICOS"
+        eyebrow="EXPERIÊNCIAS PRÁTICAS"
         title="Aprenda colocando a mão na massa"
-        text="Pratique conceitos de tecnologia por meio de atividades guiadas e cenários práticos."
+        text="Explore laboratórios e atividades guiadas para colocar em prática conceitos de tecnologia e desenvolver novas habilidades."
       />
 
       <div className="results-line">
