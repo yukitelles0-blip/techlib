@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { resources } from "../data/resources";
@@ -16,17 +17,17 @@ export default function About() {
 
         <div className="container about-hero-content">
           <div className="about-hero-copy">
-            <span className="eyebrow">SOBRE O TECHLIB</span>
+            <span className="eyebrow">SOBRE O BYTEATLAS</span>
 
             <h1>
-              Tecnologia organizada
-              <span> para quem quer aprender.</span>
+              Explore o universo
+              <span> da tecnologia.</span>
             </h1>
 
             <p>
-              O TechLib é uma biblioteca virtual criada para reunir recursos,
-              cursos, trilhas e atividades práticas de tecnologia em um só
-              lugar.
+              O ByteAtlas é um portal de conhecimento tecnológico que conecta
+              pessoas a conteúdos, recursos e referências de diferentes áreas
+              da tecnologia.
             </p>
           </div>
 
@@ -40,13 +41,13 @@ export default function About() {
 
               <div className="about-terminal-body">
                 <div>
-                  <span className="terminal-green">techlib</span>
-                  <span className="terminal-muted"> ~/aprendizado</span>
+                  <span className="terminal-green">byteatlas</span>
+                  <span className="terminal-muted"> ~/explore</span>
                 </div>
 
                 <div className="terminal-line">
                   <span className="terminal-purple">const</span>{" "}
-                  <span className="terminal-blue">aprendizado</span> = [
+                  <span className="terminal-blue">jornada</span> = [
                 </div>
 
                 <div className="terminal-indent">
@@ -68,7 +69,7 @@ export default function About() {
                 <div className="terminal-line">];</div>
 
                 <div className="terminal-output">
-                  ✓ conhecimento organizado
+                  ✓ conhecimento conectado
                 </div>
               </div>
             </div>
@@ -83,22 +84,22 @@ export default function About() {
             <span className="section-kicker">O PROJETO</span>
 
             <h2>
-              Um lugar para
-              <span> descobrir tecnologia.</span>
+              Conhecimento que
+              <span> conecta possibilidades.</span>
             </h2>
           </div>
 
           <div className="about-intro-text">
             <p>
-              Aprender tecnologia pode significar encontrar cursos em um lugar,
-              documentações em outro e atividades práticas em vários sites
-              diferentes.
+              O universo da tecnologia reúne diferentes áreas, ferramentas,
+              comunidades e possibilidades de aprendizado. Encontrar conteúdos
+              relevantes e descobrir novos caminhos nem sempre é simples.
             </p>
 
             <p>
-              O TechLib nasceu com a proposta de organizar esse conhecimento e
-              facilitar a descoberta de conteúdos para quem está começando ou
-              quer continuar evoluindo.
+              O ByteAtlas surgiu com a proposta de conectar pessoas a esse
+              universo, reunindo referências, materiais e oportunidades de
+              aprendizado em um portal organizado e acessível.
             </p>
           </div>
         </div>
@@ -108,16 +109,16 @@ export default function About() {
       <section className="about-section about-section-soft">
         <div className="container">
           <div className="section-heading about-heading-centered">
-            <span className="section-kicker">O QUE VOCÊ ENCONTRA</span>
+            <span className="section-kicker">EXPLORE O BYTEATLAS</span>
 
             <h2>
-              Quatro caminhos para
-              <span> aprender na prática.</span>
+              Diferentes formas de
+              <span> descobrir tecnologia.</span>
             </h2>
 
             <p>
-              Diferentes formatos de conteúdo para acompanhar diferentes
-              momentos da sua jornada.
+              Explore conteúdos e recursos que ajudam você a conhecer,
+              estudar e praticar diferentes áreas da tecnologia.
             </p>
           </div>
 
@@ -148,8 +149,8 @@ export default function About() {
                 <h3>Cursos</h3>
 
                 <p>
-                  Cursos gratuitos organizados para ajudar você a desenvolver
-                  conhecimentos em diferentes áreas de tecnologia.
+                  Cursos gratuitos para desenvolver conhecimentos em
+                  diferentes áreas da tecnologia.
                 </p>
 
                 <Link to="/cursos">
@@ -166,8 +167,8 @@ export default function About() {
                 <h3>Trilhas</h3>
 
                 <p>
-                  Caminhos de aprendizagem organizados para tornar seus
-                  estudos mais claros e progressivos.
+                  Caminhos de aprendizagem organizados para orientar seus
+                  estudos e explorar novas possibilidades.
                 </p>
 
                 <Link to="/trilhas">
@@ -184,8 +185,8 @@ export default function About() {
                 <h3>Labs</h3>
 
                 <p>
-                  Atividades práticas para transformar conceitos estudados em
-                  experiências e desafios.
+                  Atividades práticas para transformar conceitos estudados
+                  em experiências e desafios.
                 </p>
 
                 <Link to="/labs">
@@ -235,14 +236,14 @@ export default function About() {
             </span>
 
             <h2>
-              Menos tempo procurando.
-              <span> Mais tempo aprendendo.</span>
+              Um universo de possibilidades.
+              <span> Um ponto de partida.</span>
             </h2>
 
             <p>
-              O objetivo do TechLib é tornar o aprendizado em tecnologia mais
-              acessível, organizado e prático, reunindo diferentes tipos de
-              conteúdo em uma única plataforma.
+              O ByteAtlas busca facilitar a descoberta de conhecimento
+              tecnológico, conectando pessoas a conteúdos, referências e
+              recursos de diferentes áreas em um só portal.
             </p>
           </div>
 
@@ -250,19 +251,19 @@ export default function About() {
             <div>
               <span>01</span>
               <strong>Descobrir</strong>
-              <p>Encontre novos conteúdos e áreas da tecnologia.</p>
+              <p>Conheça novas áreas, conteúdos e possibilidades.</p>
             </div>
 
             <div>
               <span>02</span>
-              <strong>Organizar</strong>
-              <p>Tenha diferentes recursos reunidos em um só lugar.</p>
+              <strong>Conectar</strong>
+              <p>Encontre referências e recursos em diferentes áreas.</p>
             </div>
 
             <div>
               <span>03</span>
-              <strong>Praticar</strong>
-              <p>Coloque o conhecimento em ação através dos Labs.</p>
+              <strong>Evoluir</strong>
+              <p>Transforme descobertas em conhecimento e prática.</p>
             </div>
           </div>
         </div>
@@ -273,22 +274,22 @@ export default function About() {
         <div className="container">
           <div className="about-cta">
             <div>
-              <span className="section-kicker">COMECE AGORA</span>
+              <span className="section-kicker">EXPLORE O BYTEATLAS</span>
 
               <h2>
-                Seu próximo aprendizado
-                <span> pode começar aqui.</span>
+                Seu próximo caminho
+                <span> na tecnologia começa aqui.</span>
               </h2>
 
               <p>
-                Explore os conteúdos disponíveis e encontre o próximo passo da
-                sua jornada em tecnologia.
+                Explore o portal, descubra novos conteúdos e encontre
+                referências para continuar sua jornada na tecnologia.
               </p>
             </div>
 
             <div className="about-cta-actions">
               <Link className="primary-button" to="/biblioteca">
-                Explorar biblioteca →
+                Explorar conteúdos →
               </Link>
 
               <Link className="secondary-button" to="/trilhas">
