@@ -1,19 +1,24 @@
-# 📚 TechLib
 
-> Biblioteca virtual de conhecimento para a comunidade Tech.
+# 🧭 ByteAtlas
 
-O **TechLib** reúne materiais de estudo, cursos gratuitos e trilhas de aprendizagem em um só lugar, com foco em facilitar a descoberta e a organização de conteúdos para quem está começando ou evoluindo na área de tecnologia.
+> Explore o universo da tecnologia.
 
-## ✨ V1
+O **ByteAtlas** é um portal de conhecimento tecnológico que conecta pessoas a conteúdos, recursos e referências de diferentes áreas da tecnologia.
+
+A proposta é facilitar a descoberta de materiais, cursos, trilhas de aprendizagem e experiências práticas, ajudando cada pessoa a explorar diferentes caminhos dentro do universo tecnológico.
+
+## ✨ Recursos disponíveis
 
 - Home responsiva
-- Biblioteca de materiais
+- Biblioteca de materiais e referências
 - Busca por título e descrição
-- Filtros por área, nível e tipo
-- Catálogo de cursos gratuitos
+- Filtros por área, nível e tipo de conteúdo
+- Catálogo de cursos
 - Filtro de cursos por certificado
 - Trilhas de aprendizagem
-- Página sobre o projeto
+- Mapas de aprendizagem (Roadmaps)
+- Laboratórios e experiências práticas (Labs)
+- Página institucional sobre o projeto
 - Dados separados do código da interface
 - Links externos para fontes oficiais
 - Layout responsivo para desktop e celular
@@ -30,7 +35,7 @@ O **TechLib** reúne materiais de estudo, cursos gratuitos e trilhas de aprendiz
 
 ### 1. Instale o Node.js
 
-Use uma versão LTS recente do Node.js.
+Utilize uma versão LTS recente do Node.js.
 
 ### 2. Instale as dependências
 
@@ -52,16 +57,21 @@ O Vite exibirá no terminal o endereço local da aplicação.
 npm run build
 ```
 
-## 📂 Estrutura
+Os arquivos otimizados serão gerados na pasta `dist/`.
+
+## 📂 Estrutura do projeto
 
 ```text
-techlib/
+byteatlas/
 ├── public/
+│   ├── byteatlas-logo.png
+│   └── favicon.svg
 ├── src/
 │   ├── components/
 │   ├── data/
 │   ├── pages/
 │   ├── styles/
+│   ├── utils/
 │   ├── App.jsx
 │   └── main.jsx
 ├── .gitignore
@@ -70,25 +80,32 @@ techlib/
 └── README.md
 ```
 
-## 🧭 Roadmap
+## 🧭 Próximos passos
 
-- [x] Planejamento da V1
-- [x] Home
-- [x] Biblioteca
+- [x] Planejamento e estrutura inicial
+- [x] Página inicial
+- [x] Biblioteca de recursos
 - [x] Busca e filtros
-- [x] Cursos gratuitos
-- [x] Trilhas
-- [x] Página Sobre
-- [ ] Deploy público
-- [ ] Formulário para sugerir material
-- [ ] Favoritos
-- [ ] Progresso de trilhas
+- [x] Catálogo de cursos
+- [x] Trilhas de aprendizagem
+- [x] Mapas de aprendizagem
+- [x] Laboratórios práticos
+- [x] Identidade visual ByteAtlas
+- [ ] Revisão e testes gerais
+- [ ] Publicação na HostGator
+- [ ] Formulário para sugerir materiais
+- [ ] Sistema de favoritos
+- [ ] Melhorias no acompanhamento de progresso
 - [ ] Banco de dados
-- [ ] Autenticação
+- [ ] Autenticação de usuários
+- [ ] Espaço para notícias e discussões da comunidade
+- [ ] Recomendações de canais e projetos por área tecnológica
 
-## ⚠️ Curadoria
+## ⚠️ Curadoria de conteúdo
 
-O TechLib funciona como catálogo/curadoria. Os conteúdos externos devem ser acessados na fonte oficial. Antes de publicar novos recursos, verifique se o material é público e se sua divulgação é permitida.
+O ByteAtlas funciona como um portal de descoberta e curadoria de conhecimento. Os conteúdos externos devem ser acessados em suas fontes oficiais.
+
+Antes de adicionar novos recursos, verifique a disponibilidade, a confiabilidade e as condições de compartilhamento de cada material.
 
 ## 📄 Licença
 
@@ -96,4 +113,4 @@ MIT. Consulte o arquivo `LICENSE`.
 
 ---
 
-Projeto criado para fins educacionais e comunitários.
+Projeto desenvolvido com finalidade educacional e comunitária.
