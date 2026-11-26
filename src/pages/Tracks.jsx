@@ -1,3 +1,4 @@
+
 import React from "react";
 import SectionTitle from "../components/SectionTitle";
 import { tracks } from "../data/tracks";
@@ -6,9 +7,9 @@ export default function Tracks() {
   return (
     <section className="section container page-section">
       <SectionTitle
-        eyebrow="TRILHAS"
-        title="Não sabe por onde começar?"
-        text="Escolha uma direção e siga uma sequência de assuntos para construir sua base."
+        eyebrow="BYTEATLAS · MAPAS DE APRENDIZAGEM"
+        title="Encontre seu caminho na tecnologia"
+        text="Explore trilhas organizadas por áreas e conhecimentos. Cada sequência apresenta etapas para orientar seus estudos e ajudar você a desenvolver novas habilidades."
       />
 
       <div className="tracks-page-grid">
