@@ -9,17 +9,21 @@ export default function Footer() {
 
         {/* IDENTIDADE */}
         <div className="footer-column">
-          <Link className="brand footer-brand" to="/">
-            <span className="brand-mark">T</span>
-            <span>
-              <strong>TechLib</strong>
-              <small>Biblioteca Tech</small>
-            </span>
+          <Link
+            className="brand footer-brand"
+            to="/"
+            aria-label="ByteAtlas - Página inicial"
+          >
+            <img
+              src="/byteatlas-logo.png"
+              alt="ByteAtlas"
+              className="brand-logo"
+            />
           </Link>
 
           <p className="footer-text">
-            Conhecimento Tech organizado para facilitar sua jornada
-            de aprendizagem.
+            Explore o universo da tecnologia através de materiais,
+            cursos, trilhas de aprendizagem e experiências práticas.
           </p>
         </div>
 
@@ -38,9 +42,10 @@ export default function Footer() {
         <div className="footer-column">
           <h3>Projeto</h3>
           <p>
-            V1 — catálogo comunitário de recursos educacionais.
+            Um portal para explorar conteúdos, descobrir caminhos
+            de aprendizagem e desenvolver habilidades em tecnologia.
           </p>
-          <p className="footer-copy">© 2026 TechLib</p>
+          <p className="footer-copy">© 2026 ByteAtlas</p>
         </div>
 
         {/* CONTATO */}
