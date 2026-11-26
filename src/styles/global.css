@@ -147,8 +147,18 @@ textarea {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 11px;
   flex-shrink: 0;
+  line-height: 0;
+}
+
+/* Logo completa do ByteAtlas */
+.brand-logo {
+  display: block;
+  width: 170px;
+  max-width: 100%;
+  height: auto;
+  max-height: 52px;
+  object-fit: contain;
 }
 
 /* Logo opção 1: quadrado violeta + T geométrico + ponto ciano.
@@ -2330,6 +2340,13 @@ textarea:focus,
 }
 
 /* Menu de tablets e celulares */
+@media (max-width: 480px) {
+  .brand-logo {
+    width: 145px;
+    max-height: 46px;
+  }
+}
+
 @media (max-width: 900px) {
   .nav-wrap {
     position: relative;
