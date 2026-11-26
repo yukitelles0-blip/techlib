@@ -1,12 +1,24 @@
-const STORAGE_KEY = "techlib-lab-progress";
+
+const STORAGE_KEY = "byteatlas-lab-progress";
+const LEGACY_STORAGE_KEY = "techlib-lab-progress";
 
 function notifyProgressChange() {
-  window.dispatchEvent(new Event("techlib-progress-updated"));
+  window.dispatchEvent(new Event("byteatlas-progress-updated"));
 }
 
 export function getCompletedLabs() {
   try {
-    const saved = localStorage.getItem(STORAGE_KEY);
+    let saved = localStorage.getItem(STORAGE_KEY);
+
+    // Recupera o progresso salvo na versão anterior do TechLib.
+    if (!saved) {
+      const legacySaved = localStorage.getItem(LEGACY_STORAGE_KEY);
+
+      if (legacySaved) {
+        saved = legacySaved;
+        localStorage.setItem(STORAGE_KEY, legacySaved);
+      }
+    }
 
     if (!saved) {
       return [];
