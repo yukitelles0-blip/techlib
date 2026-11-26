@@ -1,3 +1,4 @@
+
 import React from "react";
 import { useMemo, useState } from "react";
 import SectionTitle from "../components/SectionTitle";
@@ -34,9 +35,9 @@ export default function Courses() {
   return (
     <section className="section container page-section">
       <SectionTitle
-        eyebrow="CURSOS GRATUITOS"
-        title="Aprenda com oportunidades acessíveis"
-        text="Catálogo inicial de cursos e capacitações. Sempre confira as condições atuais na plataforma oficial."
+        eyebrow="EXPLORE E APRENDA"
+        title="Cursos para ampliar seus conhecimentos"
+        text="Descubra cursos e oportunidades de aprendizado em diferentes áreas da tecnologia. Confira as condições e a disponibilidade diretamente nas plataformas oficiais."
       />
 
       <div className="course-filters">
