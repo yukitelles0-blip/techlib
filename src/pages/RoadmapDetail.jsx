@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 
@@ -21,9 +22,11 @@ export default function RoadmapDetail() {
           </Link>
 
           <div className="roadmap-detail-hero">
-            <span className="eyebrow">ROADMAP</span>
+            <span className="eyebrow">BYTEATLAS · ROADMAPS</span>
             <h1>Roadmap não encontrado</h1>
-            <p>O roadmap solicitado não existe.</p>
+            <p>
+              O caminho de aprendizagem que você procura não está disponível.
+            </p>
           </div>
         </div>
       </section>
@@ -38,22 +41,26 @@ export default function RoadmapDetail() {
         </Link>
 
         <div className="roadmap-detail-hero">
-          <span className="eyebrow">{roadmap.icon} ROADMAP</span>
+          <span className="eyebrow">{roadmap.icon} ROADMAP BYTEATLAS</span>
           <h1>{roadmap.name}</h1>
           <p>{roadmap.description}</p>
         </div>
 
         <div className="roadmap-section-heading">
-          <span className="eyebrow">TRILHA DE APRENDIZAGEM</span>
-          <h2>Sua jornada de aprendizagem</h2>
+          <span className="eyebrow">CAMINHO DE APRENDIZAGEM</span>
+          <h2>Explore sua jornada de aprendizagem</h2>
           <p>
-            Siga as etapas do roadmap, uma de cada vez. Clique em um
-            conhecimento para ver seus detalhes e as conexões com outros
-            assuntos.
+            Conheça as etapas deste roadmap e avance no seu próprio ritmo.
+            Clique em um conhecimento para consultar seus detalhes e descobrir
+            conexões com outros assuntos.
           </p>
         </div>
 
-        <RoadmapJourney key={id} roadmapId={id} roadmapPaths={roadmapPaths} />
+        <RoadmapJourney
+          key={id}
+          roadmapId={id}
+          roadmapPaths={roadmapPaths}
+        />
       </div>
     </section>
   );
