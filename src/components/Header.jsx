@@ -52,13 +52,13 @@ export default function Header() {
           className="brand"
           to="/"
           onClick={closeMenu}
+          aria-label="ByteAtlas - Página inicial"
         >
-          <span className="brand-mark">T</span>
-
-          <span>
-            <strong>TechLib</strong>
-            <small>Biblioteca Tech</small>
-          </span>
+          <img
+            src="/byteatlas-logo.png"
+            alt="ByteAtlas"
+            className="brand-logo"
+          />
         </Link>
 
         <button
@@ -67,7 +67,7 @@ export default function Header() {
           onClick={() => setMenuOpen((open) => !open)}
           aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
           aria-expanded={menuOpen}
-          aria-controls="techlib-main-nav"
+          aria-controls="byteatlas-main-nav"
         >
           {menuOpen ? (
             <X size={22} aria-hidden="true" />
@@ -77,7 +77,7 @@ export default function Header() {
         </button>
 
         <nav
-          id="techlib-main-nav"
+          id="byteatlas-main-nav"
           className={`main-nav${menuOpen ? " is-open" : ""}`}
           aria-label="Navegação principal"
         >
