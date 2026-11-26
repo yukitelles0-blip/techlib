@@ -1,4 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<rect width="64" height="64" rx="16" fill="#6d5dfc"/>
-<text x="32" y="43" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" font-weight="900" fill="white">T</text>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="ba-bg" cx="0.5" cy="0.45" r="0.75">
+      <stop offset="0" stop-color="#0b0a2e"/>
+      <stop offset="1" stop-color="#03031a"/>
+    </radialGradient>
+
+    <linearGradient id="ba-globe" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#4527c9"/>
+    </linearGradient>
+
+    <linearGradient id="ba-orbit" x1="4" y1="46" x2="47" y2="37" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c4b0ff"/>
+      <stop offset="0.55" stop-color="#8b4df5"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+
+    <linearGradient id="ba-arc" x1="52" y1="20" x2="57" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="14" fill="url(#ba-bg)"/>
+
+  <!-- Globo wireframe -->
+  <g fill="none" stroke="url(#ba-globe)" stroke-linecap="round">
+    <circle cx="30.6" cy="32" r="19.5" stroke-width="1.7"/>
+    <g stroke-width="1.2">
+      <line x1="30.6" y1="12.8" x2="30.6" y2="51.2"/>
+      <ellipse cx="30.6" cy="32" rx="7.6" ry="19.4"/>
+      <ellipse cx="30.6" cy="32" rx="14.4" ry="19.4"/>
+      <path d="M13.8 22.6 Q30.6 24.4 47.4 22.6"/>
+      <path d="M14.2 42 Q30.6 40.2 47 42" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- Órbita inferior -->
+  <path fill="url(#ba-orbit)"
+    d="M46.3 36.6 C36 42.2 25 46.6 15.5 47.5 C8 48.2 3.8 46.4 4.3 43.9 C4.8 41.6 7.5 40.4 10 40.8 C8 41.8 8.4 43.6 13 43.6 C25 43.4 36 41 46.3 36.6 Z"/>
+
+  <!-- Arco orbital superior direito -->
+  <path fill="url(#ba-arc)"
+    d="M52 20.3 C57 19.8 61 22.5 59.2 26.5 C58.5 28 57.2 29 56 29.7 C57.2 26 55.5 22.5 52 20.3 Z"/>
+
+  <!-- Estrela -->
+  <path fill="#c9b8ff"
+    d="M49.2 13.8 Q49.9 17.3 53.4 18.1 Q49.9 18.9 49.2 22.4 Q48.5 18.9 45 18.1 Q48.5 17.3 49.2 13.8 Z"/>
 </svg>
