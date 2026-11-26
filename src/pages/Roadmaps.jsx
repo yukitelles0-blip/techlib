@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { roadmaps } from "../data/roadmaps";
@@ -9,7 +10,7 @@ export default function Roadmaps() {
 
         <div className="roadmaps-hero">
           <span className="eyebrow">
-            🧭 MAPAS DE APRENDIZADO
+            🧭 BYTEATLAS · MAPAS DE APRENDIZAGEM
           </span>
 
           <h1>
@@ -17,9 +18,10 @@ export default function Roadmaps() {
           </h1>
 
           <p>
-            Roadmaps visuais para orientar sua jornada,
-            começando pelos fundamentos e avançando para
-            diferentes caminhos e especializações.
+            Explore mapas visuais que conectam conhecimentos,
+            tecnologias e possibilidades de especialização.
+            Descubra os fundamentos e conheça diferentes caminhos
+            para desenvolver suas habilidades.
           </p>
         </div>
 
