@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import {
@@ -29,10 +30,9 @@ export default function Home() {
         <div className="hero-grid-pattern" aria-hidden="true" />
 
         <div className="container hero-grid">
-          {/* Conteúdo principal */}
           <div className="hero-copy">
             <span className="eyebrow">
-              CONHECIMENTO TECH ORGANIZADO
+              EXPLORE O UNIVERSO DA TECNOLOGIA
             </span>
 
             <h1>
@@ -41,14 +41,14 @@ export default function Home() {
             </h1>
 
             <p>
-              Uma biblioteca virtual para descobrir materiais, cursos
-              gratuitos, trilhas de aprendizagem e laboratórios
-              práticos em tecnologia.
+              Um portal de conhecimento tecnológico que conecta pessoas
+              a conteúdos, recursos e referências de diferentes áreas
+              da tecnologia.
             </p>
 
             <div className="hero-actions">
               <Link className="primary-button" to="/biblioteca">
-                Explorar biblioteca <ArrowRight size={16} aria-hidden="true" />
+                Explorar conteúdos <ArrowRight size={16} aria-hidden="true" />
               </Link>
 
               <Link
@@ -104,20 +104,20 @@ export default function Home() {
                   <span />
                 </div>
 
-                <span>techlib.py</span>
+                <span>byteatlas.py</span>
               </div>
 
               <div className="code-content">
                 <div>
                   <span className="code-number">01</span>{" "}
                   <span className="code-purple">const</span>{" "}
-                  <span className="code-blue">techlib</span> = {"{"}
+                  <span className="code-blue">byteatlas</span> = {"{"}
                 </div>
 
                 <div>
                   <span className="code-number">02</span>
                   &nbsp;&nbsp;objetivo:{" "}
-                  <span className="code-green">"aprender"</span>,
+                  <span className="code-green">"explorar"</span>,
                 </div>
 
                 <div>
@@ -170,16 +170,16 @@ export default function Home() {
 
             {/* Terminal ilustrativo */}
             <div className="hero-mini-terminal">
-              <span>$ techlib</span>
-              <strong>› estudar</strong>
-              <strong>› praticar</strong>
+              <span>$ byteatlas</span>
+              <strong>› explorar</strong>
+              <strong>› aprender</strong>
               <strong>› evoluir</strong>
             </div>
 
-            {/* Emblema central simplificado */}
+            {/* Emblema central */}
             <div className="hero-center-badge">
               <span><Command size={22} /></span>
-              <strong>TechLib</strong>
+              <strong>ByteAtlas</strong>
             </div>
           </div>
         </div>
@@ -279,7 +279,7 @@ export default function Home() {
         <div className="container community-inner">
           <div>
             <span className="eyebrow">
-              FEITO PARA A COMUNIDADE
+              CONHECIMENTO COMPARTILHADO
             </span>
 
             <h2>
@@ -287,8 +287,9 @@ export default function Home() {
             </h2>
 
             <p>
-              O TechLib pode crescer junto com a comunidade, recebendo
-              novas indicações e trilhas.
+              O ByteAtlas conecta pessoas a diferentes fontes de
+              conhecimento e pode crescer com novas referências,
+              recursos e descobertas da comunidade.
             </p>
           </div>
 
