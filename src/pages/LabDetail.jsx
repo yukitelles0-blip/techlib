@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { labs } from "../data/labs";
@@ -31,11 +32,14 @@ export default function LabDetail() {
       <section className="section container page-section">
         <div className="empty-page">
           <span>🔎</span>
-          <h1>Lab não encontrado</h1>
-          <p>O laboratório que você tentou acessar não existe.</p>
+          <h1>Laboratório não encontrado</h1>
+          <p>
+            O laboratório que você está procurando não está disponível no
+            ByteAtlas.
+          </p>
 
           <Link className="primary-button" to="/labs">
-            Voltar para Labs
+            Voltar para os Labs
           </Link>
         </div>
       </section>
@@ -56,7 +60,7 @@ export default function LabDetail() {
     <section className="section container page-section">
       <div className="lab-detail">
         <Link className="text-link" to="/labs">
-          ← Voltar para Labs
+          ← Voltar para os Labs
         </Link>
 
         <div className="lab-detail-header">
