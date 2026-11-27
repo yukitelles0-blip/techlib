@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
@@ -55,10 +54,14 @@ export default function Header() {
           aria-label="ByteAtlas - Página inicial"
         >
           <img
-            src="/byteatlas-logo.png"
-            alt="ByteAtlas"
-            className="brand-logo"
+            src="/favicon.svg"
+            alt=""
+            className="brand-symbol"
+            aria-hidden="true"
           />
+          <span className="brand-wordmark">
+            BYTE <b>ATLAS</b>
+          </span>
         </Link>
 
         <button
