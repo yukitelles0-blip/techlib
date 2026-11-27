@@ -2181,6 +2181,10 @@ textarea:focus,
   font-size: 18px;
 }
 
+.footer-brand-name span {
+  color: var(--primary);
+}
+
 .footer-brand small {
   color: var(--muted);
 }
