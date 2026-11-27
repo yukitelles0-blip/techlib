@@ -15,10 +15,14 @@ export default function Footer() {
             aria-label="ByteAtlas - Página inicial"
           >
             <img
-              src="/byteatlas-logo.png"
-              alt="ByteAtlas"
-              className="brand-logo"
+              src="/favicon.svg"
+              alt=""
+              aria-hidden="true"
+              className="brand-mark-img"
             />
+            <strong className="footer-brand-name">
+              BYTE <span>ATLAS</span>
+            </strong>
           </Link>
 
           <p className="footer-text">
