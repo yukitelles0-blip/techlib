@@ -697,12 +697,12 @@ textarea {
 
 /* Logotipo horizontal: símbolo + texto (como na referência) */
 .site-header .brand {
-  gap: 9px;
+  gap: 10px;
 }
 
 .brand-symbol {
-  width: auto;
-  height: 40px;
+  width: 42;
+  height: 42px;
   flex-shrink: 0;
   border-radius: 12px;
 }
