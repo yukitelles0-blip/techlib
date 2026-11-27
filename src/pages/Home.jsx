@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import {
@@ -10,6 +9,7 @@ import {
 } from "lucide-react";
 
 import SectionTitle from "../components/SectionTitle";
+import HeroGlobe from "../components/HeroGlobe";
 import ResourceCard from "../components/ResourceCard";
 import CourseCard from "../components/CourseCard";
 
@@ -94,6 +94,32 @@ export default function Home() {
             <div className="hero-glow glow-two" />
 
             <div className="hero-grid-orbit" />
+
+            {/* Globo, órbitas e partículas (decorativo) */}
+            <HeroGlobe />
+
+            {/* Mini-cards de interface (decorativos) */}
+            <div className="hero-mini-ui mini-ui-a">
+              <div className="mini-ui-dots">
+                <span />
+                <span />
+                <span />
+              </div>
+              <i className="mini-bar bar-accent" />
+              <i className="mini-bar bar-primary" />
+              <i className="mini-bar bar-soft" />
+            </div>
+
+            <div className="hero-mini-ui mini-ui-b">
+              <b className="mini-ui-badge" />
+              <div className="mini-ui-lines">
+                <i className="mini-bar bar-soft" />
+                <i className="mini-bar bar-primary" />
+              </div>
+              <i className="mini-bar bar-accent mini-wide" />
+              <i className="mini-bar bar-primary mini-wide" />
+              <i className="mini-bar bar-soft mini-wide" />
+            </div>
 
             {/* Janela de código */}
             <div className="hero-code-window">
