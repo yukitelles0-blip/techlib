@@ -54,7 +54,7 @@ export default function Header() {
           aria-label="ByteAtlas - Página inicial"
         >
           <img
-            src="/favicon.svg"
+            src="/byteatlas-symbol.svg"
             alt=""
             className="brand-symbol"
             aria-hidden="true"
