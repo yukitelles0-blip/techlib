@@ -299,25 +299,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* Assinatura da marca */}
-      <section className="about-brand-signature">
-        <div className="container">
-          <div className="about-brand-content">
-            <img
-              src="/favicon.svg"
-              alt=""
-              aria-hidden="true"
-            />
-
-            <h2>
-              BYTE <span>ATLAS</span>
-            </h2>
-
-            <p>Explore o universo da tecnologia.</p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
